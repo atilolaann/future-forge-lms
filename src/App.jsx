@@ -1,6 +1,7 @@
 import { BrowserRouter as Router,Routes,Route, BrowserRouter } from "react-router-dom"
 import Home from "./pages/Home.jsx"
-import Landing from "./pages/landing.jsx"
+import Landing from "./pages/Landing.jsx"
+import Mission from "./pages/Mission.jsx"
 import Login from "./pages/Login.jsx"
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     </Routes>
     </BrowserRouter>
     <Landing />
+    <Mission />
       
     </>
   )
