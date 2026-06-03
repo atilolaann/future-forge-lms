@@ -4,7 +4,6 @@ import Landing from "./pages/Landing.jsx"
 import Mission from "./pages/Mission.jsx"
 import Login from "./pages/Login.jsx"
 function App() {
-
   return (
     <>
     <BrowserRouter>
@@ -17,7 +16,7 @@ function App() {
     <Mission />
       
     </>
-  )
+  );
 }
 
-export default App
+export default App;

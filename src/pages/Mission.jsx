@@ -5,7 +5,7 @@ function Mission () {
        <main>
         <div className="bg-orange-600 p-4  text-white flex items-center justify-between ">
             <div className="flex flex-col flex-1 m-12">
-                <div className="w-full min-w-150">
+                <div className="w-[1240] min-w-150">
                     <p className=" text-black bg-white rounded-sm w-30 text-center ">Our Mission</p>
 
                 <h1 className="text-5xl font-bold py-4 leading-16">
