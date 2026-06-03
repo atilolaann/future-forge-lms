@@ -32,7 +32,7 @@ function Home (){
                     <button className="bg-orange-400 text-white px-6 py-3 rounded-lg mt-6">Begin Journey</button>
                 </div>
                 <div className="flex-1 flex justify-end">
-                    <img src={landingpage2} className="max-w-[550px] w-full h-auto" alt="" />
+                    <img src={landingpage2} className="max-w-137.5 w-full h-auto" alt="" />
                 </div>
             </main>
             </div>

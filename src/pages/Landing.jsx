@@ -9,7 +9,7 @@ function Landing (){
             <main className=' m-16 max-w-7xl '>
                 <div className=' flex  justify-center items-center min-h-[70vh] '>
                     <div className="flex-1 flex ">
-                        <img src={page1} className="max-w-[500px] w-full h-auto" alt="" />
+                        <img src={page1} className="max-w-125 w-full h-auto" alt="" />
                                     </div>
                     <div className=' w-full max-w-xl  flex-1'>
                          <h3 className='text-5xl font-bold leading-tight '>Empowering Learners <br />Through Structured Digital Learning</h3>
