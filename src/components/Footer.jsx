@@ -6,10 +6,9 @@ import youtube from "../assets/SVGS/youtube.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-20 bg-[#000000] text-white px-[65px] font-['Gadugi',_sans-serif]">
-      {/* Apply the Figma padding values (174px top/bottom) only to this inner container */}
-      <div className="max-w-[1440px] mx-auto py-[80px] flex flex-col md:flex-row justify-between items-start gap-12">
-        <div className="w-full md:w-[400px] flex flex-col gap-6">
+    <footer className="w-full mt-20 bg-[#000000] text-white px-6 sm:px-10 lg:px-[65px] font-['Gadugi',_sans-serif]">
+      <div className="max-w-[1440px] mx-auto py-12 sm:py-16 lg:py-[80px] flex flex-col md:flex-row justify-between items-start gap-12">
+        <div className="w-full md:w-[320px] lg:w-[400px] flex flex-col gap-6">
           <h2 className="text-[24px] font-bold">FutureForge</h2>
           <p className="text-[14px] leading-[22px] opacity-90">
             Explore a world of trusted information on child and maternal
@@ -34,8 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Side: Links */}
-        <div className="flex gap-[80px] md:gap-[120px]">
+        <div className="w-full md:w-auto flex flex-col sm:flex-row flex-wrap gap-8 sm:gap-12 md:gap-[40px] lg:gap-[120px]">
           <div className="flex flex-col gap-4">
             <h3 className="font-bold text-[18px] mb-2">Explore</h3>
             <a href="#" className="text-[14px] hover:underline">
@@ -79,7 +77,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Divider */}
       <div className="max-w-[1440px] mx-auto pb-8 border-t-[1px] border-white text-center text-[14px]">
         <div className="pt-8">All rights Reserved</div>
       </div>
