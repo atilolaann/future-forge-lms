@@ -63,7 +63,7 @@ const StarRating = () => {
           className="w-[16px] h-[16px]"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#1F3D34" // Fixed outline color matching the Figma spec
+          stroke="#1F3D34"
           strokeWidth="1.5"
         >
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -75,9 +75,9 @@ const StarRating = () => {
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="flex flex-col gap-[68px] w-full max-w-[393px] h-full mx-auto">
-      <div className="border border-orange-300 rounded-[30px] p-6 bg-white flex flex-col justify-between grow">
-        <p className="text-[20px] leading-[28px] text-[#1F3D34] font-normal m-0">
+    <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[68px] w-full max-w-[393px] h-full mx-auto">
+      <div className="border border-orange-300 rounded-[30px] p-6 bg-white flex flex-col justify-between grow shadow-sm">
+        <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[28px] text-[#1F3D34] font-normal m-0">
           {testimonial.review}
         </p>
         <StarRating />
@@ -106,22 +106,21 @@ const Testimonials = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleTestimonials = showAll
     ? allTestimonials
-    : allTestimonials.slice(0, 6);
+    : allTestimonials.slice(0, 3);
 
   return (
-    <section className="py-4 px-6 md:px-10 bg-white max-w-[1440] mx-auto">
-      {/* max-w-[362px] forces the ideal line wrap precisely as shown in the design */}
-      <h2 className="font-sans font-bold text-3xl text-black mb-10 max-w-[362px]">
+    <section className="py-12 px-4 sm:px-8 md:px-10 bg-white max-w-[1440px] mx-auto">
+      <h2 className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-black mb-8 md:mb-12 max-w-[362px] text-left">
         Hear What They Say About Us
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
         {visibleTestimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}
       </div>
 
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-10 md:mt-14">
         <button
           onClick={() => setShowAll(!showAll)}
           className="bg-[#F97316] hover:bg-orange-600 text-white font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
