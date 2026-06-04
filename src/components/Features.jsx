@@ -14,10 +14,10 @@ function Features (){
           </p>
         </div>
         <div className="flex gap-5 w-[1440]">
-          <div className="border border-orange-500 rounded-sm p-2">
+          <div className="border border-orange-400 rounded-sm p-2">
             <img
               src={Vector}
-              className="bg-orange-500 w-10 p-2 rounded-full my-4"
+              className="bg-orange-400 w-10 p-2 rounded-full my-4"
               alt=""
             />
             <h2 className="text-2xl font-semibold pt-5">Track Progress</h2>
@@ -26,10 +26,10 @@ function Features (){
               learning goal.
             </p>
           </div>
-          <div className="border border-orange-500 rounded-sm p-2">
+          <div className="border border-orange-400 rounded-sm p-2">
             <img
               src={GraduationCap}
-              className="bg-orange-500 w-10 p-2 rounded-full my-4"
+              className="bg-orange-400 w-10 p-2 rounded-full my-4"
               alt=""
             />
             <h2 className="text-2xl font-semibold pt-5">Access Resources</h2>
@@ -38,10 +38,10 @@ function Features (){
               learning goal.
             </p>
           </div>
-          <div className="border border-orange-500 rounded-sm p-2">
+          <div className="border border-orange-400 rounded-sm p-2">
             <img
               src={Microphone}
-              className="bg-orange-500 w-10 p-2 rounded-full my-4"
+              className="bg-orange-400 w-10 p-2 rounded-full my-4"
               alt=""
             />
             <h2 className="text-2xl font-semibold pt-5">Watch Recordings</h2>

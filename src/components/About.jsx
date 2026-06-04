@@ -14,7 +14,7 @@ function About(){
                           heartbeat of everything we do.We believe the future belongs <br /> to
                           those who dare to create,
                         </p>
-                        <button className="bg-orange-600 py-2 px-5 rounded-sm">
+                        <button className="bg-orange-400 py-2 px-5 rounded-sm text-white">
                           Learn More
                         </button>
                       </div>

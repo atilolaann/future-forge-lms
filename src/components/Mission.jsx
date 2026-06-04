@@ -3,7 +3,7 @@ import mission from "../assets/mission.png"
 function Mission () {
     return (
        <main>
-        <div className="bg-orange-600 py-4  text-white flex items-center justify-between w-[1440] ">
+        <div className="bg-orange-400 py-4  text-white flex items-center justify-between w-[1440] ">
             <div className="flex flex-col flex-1 m-12 max-w-[50%]">
                 <div className="">
                     <p className=" text-black bg-white w-30 rounded-sm text-center ">Our Mission</p>
