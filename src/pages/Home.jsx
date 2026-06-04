@@ -9,8 +9,8 @@ import Main from '../components/Main.jsx'
 
 function Home (){
     return(
-        <div>
-        <div className="max-w-7xl  mx-12 flex flex-col">
+        <div className="bg-orange-200">
+        <div className="max-w-7xl  mx-12 flex flex-col ">
             <Nav />
            <Hero />
             </div>

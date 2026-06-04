@@ -6,14 +6,14 @@ function Nav() {
       <header className="flex gap-8 w-full  items-center justify-between mt-4  py-6">
         <img src={logo} alt="futureforge logo" />
         <nav className="flex gap-8">
-          <ul className="flex items-center justify-between gap-4">
-            <li>
+          <ul className="flex items-center justify-between gap-4 text-gray-800">
+            <li className="text-gray-600" >
               {" "}
-              <Link to="/">Home</Link>
+              <Link to="/" >Home</Link>
             </li>
-            <li>About us</li>
-            <li> How it works</li>
-            <li> Contact </li>
+            <li className="text-gray-600">About us</li>
+            <li className="text-gray-600"> How it works</li>
+            <li className="text-gray-600"> Contact </li>
           </ul>
         </nav>
         <div className="flex gap-5">
