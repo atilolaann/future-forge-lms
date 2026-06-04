@@ -3,10 +3,10 @@ import mission from "../assets/mission.png"
 function Mission () {
     return (
        <main>
-        <div className="bg-orange-600 p-4  text-white flex items-center justify-between ">
-            <div className="flex flex-col flex-1 m-12">
-                <div className="w-[1240] min-w-150">
-                    <p className=" text-black bg-white rounded-sm w-30 text-center ">Our Mission</p>
+        <div className="bg-orange-600 py-4  text-white flex items-center justify-between w-[1440] ">
+            <div className="flex flex-col flex-1 m-12 max-w-[50%]">
+                <div className="">
+                    <p className=" text-black bg-white w-30 rounded-sm text-center ">Our Mission</p>
 
                 <h1 className="text-5xl font-bold py-4 leading-16">
                     Building A Smarter <br /> Future Through <br />Learning
@@ -19,7 +19,7 @@ function Mission () {
                 </div>
             </div>
               <div className="flex flex-1 justify-end">
-                <img src={mission} className=' w-full max-w-137.5 self-center h-auto' alt="" />
+                <img src={mission} className=' self-center my-6 h-auto' alt="" />
               </div>
         </div>
        </main>

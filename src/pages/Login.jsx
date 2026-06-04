@@ -6,7 +6,7 @@ function Login (){
     return(
         <div>
             
-               <main className="bg-gray-700 flex  justify-center  w-full max-h-[90%] h-screen">
+               <main className="bg-gray-100 flex  justify-center  max-h-[90%] h-screen">
                 <section className="bg-orange-600 p-10 text-white flex flex-col 
                  justify-center w-full max-w-92 my-5 ml-6">
                 <div className="w-full ">

@@ -109,7 +109,7 @@ const Testimonials = () => {
     : allTestimonials.slice(0, 6);
 
   return (
-    <section className="py-[60px] px-6 md:px-10 bg-white max-w-[1240px] mx-auto">
+    <section className="py-4 px-6 md:px-10 bg-white max-w-[1440] mx-auto">
       {/* max-w-[362px] forces the ideal line wrap precisely as shown in the design */}
       <h2 className="font-sans font-bold text-3xl text-black mb-10 max-w-[362px]">
         Hear What They Say About Us
