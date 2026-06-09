@@ -41,7 +41,7 @@ function Features() {
           <h2 className="text-xl sm:text-2xl font-semibold pt-4">
             Access Resources
           </h2>
-          <p className="text-sm sm:text-base mt-2 text-neutral-600">
+          <p className="text-sm sm:tnext-base mt-2 text-neutral-600">
             Monitor your weekly cohort progress and stay on top of your learning
             goal.
           </p>

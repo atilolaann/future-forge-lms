@@ -19,6 +19,7 @@ function Nav() {
         <div className="flex gap-5">
           <button className="bg-black text-white px-6 py-2 rounded-lg">
             <Link to="/Login">Log in</Link>
+            <Link to="/Dashboard">Dashboard</Link>
           </button>
           <button className="bg-orange-400 text-white px-6 py-2 rounded-lg">
             Get started
