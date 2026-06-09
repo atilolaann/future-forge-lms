@@ -24,11 +24,7 @@ function Sidebar (){
                           <img src={Vector1} className='w-5 h-5 hover:text-white' alt="" />
                            {isSidebarOpen &&  <p>Dashboard</p>}
                           </div>
-                         </Link>
-                        
-                       
-                   
-
+                         </Link>                   
                         <Link to="/Recordingscontent">     
                           <div className="flex items-center gap-3  py-2 hover:px-8   rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-200 cursor-pointer">
                          <img src={Vector2} className='w-5 h-5' alt="" /> 
