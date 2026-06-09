@@ -14,8 +14,6 @@ import Resourcescontent from "./components2/Resourcescontent.jsx";
 import Recordingscontent from "./components2/Recordingscontent.jsx";
 import Account from "./components2/Account.jsx";
 
-
-
 function App() {
   return (
     <>
@@ -27,20 +25,15 @@ function App() {
           <Route path="/Recordingscontent" element={<Recordingscontent />} />
           <Route path="/Account" element={<Account />} />
           <Route
-           path="/dashboard" 
-           element={
-            <ProtectedRoute>
-               <Dashboard />
-            </ProtectedRoute>
-          } />
-         
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
-
-  
-     
-     
-      
     </>
   );
 }

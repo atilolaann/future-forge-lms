@@ -2,7 +2,7 @@ import landingpage2 from "../assets/landingpage2.png";
 
 function Hero() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 mt-20">
       <main className="flex flex-col md:flex-row gap-10 md:gap-2 justify-between items-center min-h-[70vh] py-10 md:py-0">
         <div className="w-full md:flex-1 max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
