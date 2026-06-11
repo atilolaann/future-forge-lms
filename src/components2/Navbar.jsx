@@ -1,8 +1,11 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo2 from '../assets/logo2.png'
 import Frame from '../assets/Frame.png'
 import Avatar from '../assets/Avatar.png'
-function Navbar (){
+function Navbar ({userData}){
+    const firstLetter = userData?.fullName?.charAt(0).toUpperCase();
+
     return (
         <div>
             <nav className='flex justify-between p-4 border-b border-gray-300'>
@@ -11,7 +14,7 @@ function Navbar (){
                  </Link>
                 <div className='flex'>
                     <img src={Frame} className='w-10 h-10' alt="" />
-                    <img src={Avatar} className='w-10 h-10' alt="" />
+                    <img src={firstLetter} className='w-10 h-10' alt="" />
                     
                 </div>
             </nav>

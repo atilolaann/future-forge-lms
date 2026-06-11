@@ -6,7 +6,7 @@ import login from "../assets/login.png";
 import LoginA from "./LoginA";
 
 function Login() {
-  const [name, setName] = useState("");
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,7 +15,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    if (!email.trim() || !password.trim() || !name.trim()) {
+    if (!email.trim() || !password.trim()) {
       setError(" ❌Please fill all fields");
       return;
     }
@@ -31,14 +31,14 @@ function Login() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ email, password, name }),
+          body: JSON.stringify({ email, password }),
         },
       );
 
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || "❌Login failed");
+        setError(data.message || "❌Login failed,Contact Lead");
         return;
       }
 
@@ -62,16 +62,8 @@ function Login() {
           <h2 className="text-2xl font-bold ">Welcome back</h2>
           <p className="font-semibold">Sign in to your account</p>
 
-          <div className="flex flex-col my-2 ">
-            <label className="font-normal mt-6">Full name</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter Full name"
-              className="border rounded-sm border-orange-600 px-2"
-            />
-          </div>
+         
+          
           <div className="flex flex-col my-2 ">
             <label className="font-normal ">Email</label>
             <input
