@@ -3,10 +3,10 @@ import login from "../assets/login.png";
 
 function LoginA() {
   return (
-    <div className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] flex-1 h-screen">
+    <div className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] flex-1 h-screen">
       <section className="p-10 text-white flex items-center flex-col justify-center gap-10 2xl:gap-16">
         {/* Logo */}
-        <div className="w-[544px] h-[100px]">
+        <div className="w-136 h-25">
           <img
             src={LoginLogo}
             className="w-full h-full object-contain"
@@ -15,7 +15,7 @@ function LoginA() {
         </div>
 
         {/* Login Image */}
-        <div className="w-[544px] h-auto">
+        <div className="w-136 h-auto">
           <img
             src={login}
             className="w-full h-full my-2"
@@ -26,7 +26,7 @@ function LoginA() {
 
         {/* Description */}
 
-        <div className="w-[544px]">
+        <div className="w-136">
           <h2 className="text-4xl font-bold py-5">Onboard into our LMS</h2>
           <p className="text-2xl font-normal">
             Your personalized learning hub for resources, recordings, progress
