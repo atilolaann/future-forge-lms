@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
-import login from "../assets/login.png";
-import LoginA from "./LoginA";
+import LoginA from "../components/LeftSIdeLogin";
 
 function Login() {
-  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -54,55 +51,54 @@ function Login() {
     }
   };
   return (
-    <div>
-      <main className="bg-gray-100 flex  justify-center  max-h-[90%] h-screen">
-        <LoginA />
+    <main
+      className="bg-gray-100 flex justify-center h-screen m-0"
+      style={{ width: "100vw" }}
+    >
+      <LoginA />
 
-        <section className="bg-white p-6 max-w-92 flex flex-col my-5">
-          <h2 className="text-2xl font-bold ">Welcome back</h2>
-          <p className="font-semibold">Sign in to your account</p>
+      <section className="bg-white p-6  flex-1 flex-col my-5">
+        <h2 className="text-2xl font-bold ">Welcome back</h2>
+        <p className="font-semibold">Sign in to your account</p>
 
-         
-          
-          <div className="flex flex-col my-2 ">
-            <label className="font-normal ">Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email"
-              className="border rounded-sm border-orange-600 px-2"
-            />
-          </div>
-          <div className="flex flex-col my-2">
-            <label>Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="input password"
-              className="border rounded-sm border-orange-600 mb-12 px-2"
-            />
+        <div className="flex flex-col my-2 ">
+          <label className="font-normal ">Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
+            className="border rounded-sm border-orange-600 px-2"
+          />
+        </div>
+        <div className="flex flex-col my-2">
+          <label>Password</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="input password"
+            className="border rounded-sm border-orange-600 mb-12 px-2"
+          />
 
-            {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
-            <button
-              onClick={handleLogin}
-              disabled={loading}
-              className="bg-orange-600 text-white rounded-sm py-1.5 "
-            >
-              {loading ? "Logging in..." : "Login"}
-            </button>
-            <p className="pt-2">
-              Don't have access to LMS? Go back{" "}
-              <span className="text-orange-600">
-                {" "}
-                <Link to="/">Home</Link>
-              </span>
-            </p>
-          </div>
-        </section>
-      </main>
-    </div>
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+          <button
+            onClick={handleLogin}
+            disabled={loading}
+            className="bg-orange-600 text-white rounded-sm py-1.5 "
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+          <p className="pt-2">
+            Don't have access to LMS? Go back{" "}
+            <span className="text-orange-600">
+              {" "}
+              <Link to="/">Home</Link>
+            </span>
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
 export default Login;
