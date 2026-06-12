@@ -5,7 +5,9 @@
   --font-sans: "Inter", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0 !important;
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0; /* Remove !important */
+  }
 }
