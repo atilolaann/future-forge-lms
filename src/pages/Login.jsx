@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import LeftSIdeLogin from "../components/LeftSIdeLogin";
+import { toast } from "sonner";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -18,7 +17,6 @@ function Login() {
       return;
     }
 
-    setError("");
     setLoading(true);
 
     try {
@@ -36,14 +34,24 @@ function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || "❌Login failed,Contact Lead");
-        return;
+        throw new Error(data?.message || "Login failed. Please try again.");
       }
+
       localStorage.setItem("token", data?.data?.token);
       navigate("/dashboard");
+
+      toast.success("Login successful! Welcome back.", {
+        description: "You have successfully logged in to your account.",
+        duration: 4000,
+        position: "top-right",
+      });
     } catch (err) {
-      console.error("", err);
-      setError("❌Network error. Please try again.");
+      toast.error("Login failed. Please try again.", {
+        description:
+          err.message || "There was a problem connecting to the server.",
+        duration: 4000,
+        position: "top-right",
+      });
     } finally {
       setLoading(false);
     }
