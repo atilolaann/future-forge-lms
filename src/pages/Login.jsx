@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftSIdeLogin from "../components/LeftSIdeLogin";
 import { toast } from "sonner";
+import { Eye, EyeSlash } from "iconsax-reactjs";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -9,6 +10,7 @@ function Login() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -103,11 +105,11 @@ function Login() {
             )}
           </div>
 
-          <div className="flex flex-col mt-4">
+          <div className="flex flex-col mt-4 relative">
             <label className="font-normal text-md">Password</label>
             <input
-              type="password"
               value={password}
+              type={visible ? "text" : "password"}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
               className="border rounded-[10px] border-orange-600 px-2 h-15 text-black"
@@ -115,6 +117,24 @@ function Login() {
             {passwordError && (
               <p className="text-red-500 text-sm mt-2">{passwordError}</p>
             )}
+
+            <div className="absolute right-3 top-10">
+              {visible ? (
+                <div
+                  onClick={() => setVisible(!visible)}
+                  className="cursor-pointer block"
+                >
+                  <Eye size="32" color="#F59E0B" />
+                </div>
+              ) : (
+                <div
+                  onClick={() => setVisible(!visible)}
+                  className="cursor-pointer block"
+                >
+                  <EyeSlash size="32" color="#F59E0B" />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="w-full mt-10">
