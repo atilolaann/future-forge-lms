@@ -81,12 +81,12 @@ function Login() {
 
   return (
     <main
-      className="bg-white flex justify-center h-screen"
+      className="bg-white flex  w-screen min-h-screen "
       style={{ width: "100vw" }}
     >
       <LeftSIdeLogin />
 
-      <section className="bg-white p-6 flex flex-1 items-center justify-center my-5">
+      <section className="bg-white p-6 flex flex-1 items-center justify-center ">
         <div className="w-92.25">
           <h2 className="text-4xl font-bold ">Welcome back</h2>
           <p className="text-[20px] font-normal">Sign in to your account</p>
