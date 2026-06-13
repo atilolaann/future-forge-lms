@@ -1,9 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
 import logo3 from "../assets/logo3.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 function Nav() {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setToggle(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleDashboardClick = () => {
     localStorage.setItem("token", "your_token_here");
@@ -11,89 +22,119 @@ function Nav() {
   };
 
   return (
-    <div>
-      <header className="flex gap-8 w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
-       <div className="w-70 h-10">
-         <img src={logo3} alt="futureforge logo" />
-       </div>
-        <nav className="hidden md:flex gap-8">
-          <ul className="flex items-center justify-between gap-4 text-gray-800">
-            <li className="text-gray-600">
-              {" "}
+    <div className="relative">
+      <header className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
+        {/* Logo */}
+        <div className="w-36 sm:w-44 md:w-52 lg:w-60 h-10">
+          <img
+            src={logo3}
+            alt="futureforge logo"
+            className="h-full w-full object-contain"
+          />
+        </div>
+
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex">
+          <ul className="flex items-center gap-6 lg:gap-8 text-gray-600">
+            <li className="hover:text-orange-400 transition-colors duration-200">
               <Link to="/">Home</Link>
             </li>
-            <li className="text-gray-600">About us</li>
-            <li className="text-gray-600"> How it works</li>
-            <li className="text-gray-600"> Contact </li>
+            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+              About us
+            </li>
+            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+              How it works
+            </li>
+            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+              Contact
+            </li>
           </ul>
         </nav>
 
-        <div className="hidden md:flex gap-5">
-          <button className="bg-black text-white px-6 py-2 rounded-lg">
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex gap-3 lg:gap-5">
+          <button className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200">
             <Link to="/Login">Log in</Link>
           </button>
-
           <button
-            className="bg-black text-white px-6 py-2 rounded-lg"
+            className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200"
             onClick={handleDashboardClick}
           >
-            <p>Dashboard</p>
+            Dashboard
           </button>
-
-          <button className="bg-orange-400 text-white px-6 py-2 rounded-lg">
+          <button className="bg-orange-400 text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200">
             Get started
           </button>
         </div>
 
-        <button onClick={() => setToggle(true)} className="lg:hidden ">
-          nav
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setToggle(true)}
+          className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-orange-100 transition-colors duration-200"
+        >
+          <span className="block w-6 h-0.5 bg-gray-800"></span>
+          <span className="block w-6 h-0.5 bg-gray-800"></span>
+          <span className="block w-6 h-0.5 bg-gray-800"></span>
         </button>
       </header>
+
+      {/* Mobile Menu Overlay */}
       {toggle && (
-        <div
-          className="absolute top-0 right-0 h-full w-full bg-amber-600 p-4"
-          style={{ borderBottomLeftRadius: 20, borderBottomRightRadius: 20 }}
-        >
-          <button
-            onClick={() => setToggle(false)}
-            className="ml-auto"
-            style={{ display: "flex", alignSelf: "end" }}
-          >
-            close
-          </button>
+        <div className="md:hidden absolute top-0 left-0 w-full bg-orange-400 p-6 z-50 shadow-lg rounded-b-3xl">
+          {/* Close Button */}
+          <div className="flex justify-end mb-6">
+            <button
+              onClick={() => setToggle(false)}
+              className="text-white font-semibold text-sm bg-orange-500 hover:bg-orange-600 transition-colors duration-200 px-4 py-2 rounded-lg"
+            >
+              ✕ Close
+            </button>
+          </div>
 
-          <div className="flex flex-col gap-3 text-amber-50">
-            <nav className="flex gap-8">
-              <ul className="flex flex-col items-start justify-between gap-4 text-white">
-                <li className="text-white">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="text-white">About us</li>
-                <li className="text-white"> How it works</li>
-                <li className="text-white"> Contact </li>
-              </ul>
-            </nav>
+          {/* Mobile Nav Links */}
+          <nav className="mb-8">
+            <ul className="flex flex-col gap-4 text-white text-lg font-medium">
+              <li className="hover:text-orange-100 transition-colors duration-200">
+                <Link to="/" onClick={() => setToggle(false)}>
+                  Home
+                </Link>
+              </li>
+              <li className="hover:text-orange-100 transition-colors duration-200 cursor-pointer">
+                About us
+              </li>
+              <li className="hover:text-orange-100 transition-colors duration-200 cursor-pointer">
+                How it works
+              </li>
+              <li className="hover:text-orange-100 transition-colors duration-200 cursor-pointer">
+                Contact
+              </li>
+            </ul>
+          </nav>
 
-            <div className="flex flex-col gap-3 mt-10">
-              <button className="bg-black text-white px-6 py-2 rounded-lg">
-                <Link to="/Login">Log in</Link>
-              </button>
-
-              <button
-                className="bg-black text-white px-6 py-2 rounded-lg"
-                onClick={handleDashboardClick}
-              >
-                <p>Dashboard</p>
-              </button>
-
-              <button className="bg-orange-400 text-white px-6 py-2 rounded-lg">
-                Get started
-              </button>
-            </div>
+          {/* Mobile Buttons */}
+          <div className="flex flex-col gap-3">
+            <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full">
+              <Link to="/Login" onClick={() => setToggle(false)}>
+                Log in
+              </Link>
+            </button>
+            <button
+              className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full"
+              onClick={() => {
+                handleDashboardClick();
+                setToggle(false);
+              }}
+            >
+              Dashboard
+            </button>
+            <button className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors duration-200 w-full">
+              Get started
+            </button>
           </div>
         </div>
       )}
     </div>
   );
 }
+
 export default Nav;
