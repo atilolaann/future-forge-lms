@@ -11,9 +11,12 @@ function Logout({setShowLogout, isSidebarOpen}) {
       <button
        className="text-white flex items-center gap-3 p-2"
        onClick={() =>setShowLogout(true)}>
-          <div className="flex gap-1 text-black  hover:text-white transition-all duration-600 ">
-            <div className="w-5 h-5">
-            <img src={isSidebarOpen?SignOut:SignOutB}  alt="" />
+          <div className="group flex gap-1 text-black  hover:text-white transition-all duration-600 ">
+            <div className=" block group-hover:hidden w-5 h-5">
+            <img src={SignOutB}  alt="" />
+          </div>
+          <div className=" hidden group-hover:block w-5 h-5">
+            <img src={SignOut}  alt="" />
           </div>
           {isSidebarOpen && <p >Logout</p>}
           </div>

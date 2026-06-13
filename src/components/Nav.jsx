@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo3 from "../assets/logo3.png";
 import { useState } from "react";
 function Nav() {
   const [toggle, setToggle] = useState(false);
@@ -13,7 +13,9 @@ function Nav() {
   return (
     <div>
       <header className="flex gap-8 w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
-        <img src={logo} alt="futureforge logo" />
+       <div>
+         <img src={logo3} alt="futureforge logo" />
+       </div>
         <nav className="hidden md:flex gap-8">
           <ul className="flex items-center justify-between gap-4 text-gray-800">
             <li className="text-gray-600">

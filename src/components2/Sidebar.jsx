@@ -33,7 +33,7 @@ function Sidebar() {
         ' border-r border-gray-300 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "w-56": "w-16"}'
       }
     >
-      <div className="p-8  max-w-[50] flex flex-col justify-center items-center gap-12 min-h-screen">
+      <div className="p-8  max-w-[50] flex flex-col items-start  gap-12 min-h-screen">
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
          <div  className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner">
            <img
@@ -43,15 +43,22 @@ function Sidebar() {
         </button>
 
         <div className="flex flex-col gap-4">
+          
           <Link to="/Dashboard">
-            <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
+            <div className={`group flex items-start justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
+
               <div className= "flex items-center gap-2">
-                <div  className="w-5 h-5 hover:text-white">
+                <div  className="block group-hover:hidden w-5 h-5">
                 <img
-               src={isSidebarOpen?vector1W:Vector1} 
+               src={Vector1} 
+               alt="" />
+                </div>
+                <div  className="hidden group-hover:block w-5 h-5">
+                <img
+               src={vector1W} 
                alt="" />
                 </div>
                {isSidebarOpen && <p>Dashboard</p>}
@@ -60,14 +67,19 @@ function Sidebar() {
             </div>
           </Link>
           <Link to="/Recordingscontent">
-            <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
+            <div className={`group flex items-start justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
-                :"justify-center py-3 hover:bg-orange-400"}`}>
+                :"justify-center p-3 hover:bg-orange-400"}`}>
              <div className= "flex items-center gap-2">
-               <div  className="w-5 h-5">
+               <div  className=" block group-hover:hidden  w-5 h-5">
                 <img
-               src={isSidebarOpen?vector2W:Vector2} 
+               src={Vector3} 
+                alt="" />
+                  </div>
+               <div  className=" hidden group-hover:block w-5 h-5">
+                <img
+               src={vector2W} 
                 alt="" />
                   </div>
               {isSidebarOpen && <p> Recordings</p>}
@@ -77,13 +89,16 @@ function Sidebar() {
           </Link>
 
           <Link to="/Resourcescontent">
-            <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
+            <div className={`group flex items-start justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
               <div className= "flex items-center gap-2">
-                <div className="w-5 h-5">
-                <img src={isSidebarOpen?vector3W:Vector3}  alt="" />
+                <div className="block group-hover:hidden w-5 h-5">
+                <img src={Vector2}  alt="" />
+                 </div>
+                <div className="hidden group-hover:block w-5 h-5">
+                <img src={vector3W}  alt="" />
                  </div>
                 {isSidebarOpen && <p>Resources</p>}
               </div>
@@ -92,13 +107,16 @@ function Sidebar() {
           </Link>
 
           <Link to="/Account">
-            <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
+            <div className={`group flex items-start justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
               <div className= "flex items-center gap-2">
-                <div className="w-5 h-5 ">
-                  <img src={isSidebarOpen?vector4W:Vector4} alt="" />
+                <div className="block group-hover:hidden w-5 h-5">
+                  <img src={Vector4} alt="" />
+                </div>
+                <div className="hidden group-hover:block w-5 h-5">
+                  <img src={vector4W} alt="" />
                 </div>
                 {isSidebarOpen && <p>Account</p>}
               </div>
