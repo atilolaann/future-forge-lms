@@ -13,7 +13,7 @@ function Nav() {
   return (
     <div>
       <header className="flex gap-8 w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
-       <div>
+       <div className="w-70 h-10">
          <img src={logo3} alt="futureforge logo" />
        </div>
         <nav className="hidden md:flex gap-8">
