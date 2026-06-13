@@ -148,7 +148,7 @@ function Login() {
 
             <p className="pt-2 text-lg">
               Don't have access to LMS?{" "}
-              <span className="text-orange-600 cursor-pointer">
+              <span className="text-orange-500 cursor-pointer">
                 Contact Lead
               </span>
             </p>
