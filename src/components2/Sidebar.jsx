@@ -46,7 +46,7 @@ function Sidebar() {
           <Link to="/Dashboard">
             <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
-                 "gap-3 px-3 py-2 hover:px-16 hover:bg-orange-400 hover:text-white"
+                 "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
               <div className= "flex items-center gap-2">
                 <div  className="w-5 h-5 hover:text-white">
@@ -62,7 +62,7 @@ function Sidebar() {
           <Link to="/Recordingscontent">
             <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
-                 "gap-3 px-3 py-2 hover:px-16 hover:bg-orange-400 hover:text-white"
+                 "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
              <div className= "flex items-center gap-2">
                <div  className="w-5 h-5">
@@ -79,7 +79,7 @@ function Sidebar() {
           <Link to="/Resourcescontent">
             <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
-                 "gap-3 px-3 py-2 hover:px-16 hover:bg-orange-400 hover:text-white"
+                 "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
               <div className= "flex items-center gap-2">
                 <div className="w-5 h-5">
@@ -94,7 +94,7 @@ function Sidebar() {
           <Link to="/Account">
             <div className={`flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
-                 "gap-3 px-3 py-2 hover:px-16 hover:bg-orange-400 hover:text-white"
+                 "gap-3 px-3 py-2  hover:bg-orange-400 hover:text-white"
                 :"justify-center py-3 hover:bg-orange-400"}`}>
               <div className= "flex items-center gap-2">
                 <div className="w-5 h-5 ">
