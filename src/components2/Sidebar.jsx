@@ -33,7 +33,7 @@ function Sidebar() {
         ' border-r border-gray-300 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "w-56": "w-16"}'
       }
     >
-      <div className="p-8  max-w-[50] flex flex-col gap-12 min-h-screen">
+      <div className="p-8  max-w-[50] flex flex-col justify-center items-center gap-12 min-h-screen">
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
          <div  className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner">
            <img
