@@ -16,18 +16,23 @@ function Navbar({ userData }) {
 
   return (
     <div>
-      <nav className="flex justify-between p-4 border-b border-gray-300">
+      {/* Added pl-14 on mobile screens to create an intentional gap for the hamburger menu */}
+      <nav className="flex justify-between items-center p-3 sm:p-4 pl-14 sm:pl-4 border-b border-gray-300">
         <Link to="/">
-          <div className="w-50 h-10">
-            <img src={logo3}  alt="futureforge logo " />
+          <div className="w-32 h-8 sm:w-40 sm:h-10 md:w-48 flex items-center">
+            <img
+              src={logo3}
+              className="object-contain w-full h-full"
+              alt="futureforge logo"
+            />
           </div>
         </Link>
 
-        <div className="flex items-center ">
-          <img src={Frame} className="w-10 h-10" alt="" />
+        <div className="flex items-center gap-2 sm:gap-4">
+          <img src={Frame} className="w-8 h-8 sm:w-10 sm:h-10" alt="" />
 
           <div
-            className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center cursor-pointer"
+            className="w-7 h-7 sm:w-8 sm:h-8 text-xs sm:text-sm rounded-full bg-blue-500 text-white flex items-center justify-center cursor-pointer"
             onClick={() => navigate("/Account")}
           >
             {initials}
