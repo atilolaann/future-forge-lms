@@ -16,7 +16,7 @@ import LogoutAlert from "../components2/LogoutAlert.jsx";
 import X from "../assets/X.png";
 
 function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
 
 

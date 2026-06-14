@@ -4,6 +4,7 @@ import Vec1 from '../assets/Vec1.png'
 import Alarm from '../assets/Alarm.png'
 import Vec2 from '../assets/Vec2.png'
 
+
 function Resourcescontent (){
     const resources = [
         {
@@ -51,14 +52,17 @@ function Resourcescontent (){
                                  >
                                     <div  className="flex justify-between items-start">
                                         <div>
-                                            <h3 className='text-xl font-semibold'>
+                                           <div className='flex justify-between '>
+                                             <h3 className='text-xl font-semibold'>
                                                 {item.title}
                                             </h3>
+                                            <img src={item.icon} className="w-6 h-6" alt={item.title} />
+                                           </div>
                                             <p className='text-gray-600 mt-2'>
                                                 {item.description}
                                             </p>
                                         </div>
-                                         <img src={item.icon} className="w-6 h-6" alt={item.title} />
+                                         
                                     </div>
                                  </a>
                             ))
