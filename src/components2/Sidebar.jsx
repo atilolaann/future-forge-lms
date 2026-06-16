@@ -16,7 +16,7 @@ import LogoutAlert from "../components2/LogoutAlert.jsx";
 import X from "../assets/X.png";
 
 function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
   const navigate = useNavigate();
 
@@ -37,7 +37,19 @@ function Sidebar() {
           <div className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner hover:bg-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer">
             <img src={isSidebarOpen ? X : List} alt=" " />
           </div>
+      
+      <div className = "">
+      <div className={`p-8  max-w-[50]  items-start  gap-4 min-h-screen ${isSidebarOpen? "flex": "flex flex-col"}`}>
+        <div>
+           <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+         <div  className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner">
+           <img
+           src={isSidebarOpen?X:List} 
+           alt=" " />
+         </div>
         </button>
+        </div>
+       
 
         <div className="flex flex-col gap-4 w-full">
           <Link to="/Dashboard">
@@ -51,6 +63,19 @@ function Sidebar() {
               <div className="flex items-center gap-2">
                 <div className="block group-hover:hidden w-5 h-5">
                   <img src={Vector1} alt="" />
+        <div className="flex flex-col gap-4 text-left">
+          
+          <Link to="/Dashboard">
+            <div className={`group flex items-center p-2 justify-center rounded-lg transition-all duration-200 cursor-pointer
+                ${isSidebarOpen?
+                 " hover:bg-orange-400 hover:text-white"
+                :"justify-center  hover:bg-orange-400"}`}>
+
+              <div className= "flex items-start justify-center gap-2">
+                <div  className="block group-hover:hidden w-5 h-5 text-left">
+                <img
+               src={Vector1} 
+               alt="" />
                 </div>
                 <div className="hidden group-hover:block w-5 h-5">
                   <img src={vector1W} alt="" />
@@ -77,6 +102,24 @@ function Sidebar() {
                 </div>
                 {isSidebarOpen && <p>Recordings</p>}
               </div>
+            <div className={`group flex p-2 items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
+                ${isSidebarOpen?
+                 " hover:bg-orange-400 hover:text-white"
+                :"justify-center  hover:bg-orange-400"}`}>
+             <div className= "flex items-start justify-center gap-2">
+               <div  className=" block group-hover:hidden  w-5 h-5">
+                <img
+               src={Vector3} 
+                alt="" />
+                  </div>
+               <div  className=" hidden group-hover:block w-5 h-5">
+                <img
+               src={vector2W} 
+                alt="" />
+                  </div>
+              {isSidebarOpen && <p> Recordings</p>}
+             </div>
+            
             </div>
           </Link>
 
@@ -89,6 +132,11 @@ function Sidebar() {
               }`}
             >
               <div className="flex items-center gap-2">
+            <div className={`group flex items-center p-2 justify-center rounded-lg transition-all duration-200 cursor-pointer
+                ${isSidebarOpen?
+                 " hover:bg-orange-400 hover:text-white"
+                :"justify-center  hover:bg-orange-400"}`}>
+              <div className= "flex items-start justify-center gap-2 ">
                 <div className="block group-hover:hidden w-5 h-5">
                   <img src={Vector2} alt="" />
                 </div>
@@ -110,6 +158,12 @@ function Sidebar() {
             >
               <div className="flex items-center gap-2">
                 <div className="block group-hover:hidden w-5 h-5">
+            <div className={`group flex items-center p-2 justify-center rounded-lg transition-all duration-200 cursor-pointer
+                ${isSidebarOpen?
+                 " hover:bg-orange-400 hover:text-white"
+                :"justify-center  hover:bg-orange-400"}`}>
+              <div className= "flex items-start justify-center gap-2 ">
+                <div className="block group-hover:hidden w-6 h-5">
                   <img src={Vector4} alt="" />
                 </div>
                 <div className="hidden group-hover:block w-5 h-5">
@@ -120,6 +174,7 @@ function Sidebar() {
             </div>
           </Link>
         </div>
+      </div>
       </div>
 
       <div>
