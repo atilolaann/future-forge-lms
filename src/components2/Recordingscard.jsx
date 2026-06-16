@@ -4,7 +4,7 @@ import youtube from "../assets/youtube.png";
 function Recordingscard() {
   return (
     <div className="w-full h-full">
-      <div className="m-0 sm:m-2 p-4 sm:p-6 w-full lg:max-w-[507px] h-full border-gray-300 rounded-lg shadow-inner flex flex-col justify-between">
+      <div className="m-0 sm:m-2 p-4 sm:p-6 w-full lg:max-w-[507] h-full border-gray-300 rounded-lg shadow-inner flex flex-col justify-between">
         <div>
           <h2 className="text-lg sm:text-xl font-bold py-2 sm:py-6">
             Recordings
