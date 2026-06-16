@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import landingpage2 from "../assets/landingpage2.png";
 
 function Hero() {
@@ -15,7 +16,7 @@ function Hero() {
             Watch session recordings, track cohort progress.
           </p>
           <button className="bg-orange-400 text-white px-6 py-3 rounded-lg mt-6">
-            Begin Journey
+            <Link to="/Login"> Begin Journey</Link>
           </button>
         </div>
         <div className="w-full md:flex-1 flex justify-center md:justify-end">

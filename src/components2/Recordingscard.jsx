@@ -23,7 +23,7 @@ function Recordingscard() {
         <div>
           <Link
             to="/Recordingscontent"
-            className="block text-center bg-orange-500 text-white w-full p-2 rounded-lg hover:bg-orange-600 transition-colors"
+            className="block text-center bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white w-full p-2 rounded-lg hover:bg-orange-600 transition-colors"
           >
             Watch Recordings
           </Link>

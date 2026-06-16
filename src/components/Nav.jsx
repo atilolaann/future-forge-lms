@@ -56,12 +56,7 @@ function Nav() {
           <button className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200">
             <Link to="/Login">Log in</Link>
           </button>
-          <button
-            className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200"
-            onClick={handleDashboardClick}
-          >
-            Dashboard
-          </button>
+        
           <button className="bg-orange-400 text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200">
             Get started
           </button>
@@ -117,15 +112,6 @@ function Nav() {
               <Link to="/Login" onClick={() => setToggle(false)}>
                 Log in
               </Link>
-            </button>
-            <button
-              className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full"
-              onClick={() => {
-                handleDashboardClick();
-                setToggle(false);
-              }}
-            >
-              Dashboard
             </button>
             <button className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors duration-200 w-full">
               Get started
