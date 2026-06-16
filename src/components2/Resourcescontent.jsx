@@ -1,8 +1,8 @@
-import Navbar from '../components2/Navbar.jsx'
-import Sidebar from '../components2/Sidebar.jsx'
-import Vec1 from '../assets/Vec1.png'
-import Alarm from '../assets/Alarm.png'
-import Vec2 from '../assets/Vec2.png'
+import Navbar from "../components2/Navbar.jsx";
+import Sidebar from "../components2/Sidebar.jsx";
+import Vec1 from "../assets/Vec1.png";
+import Alarm from "../assets/Alarm.png";
+import Vec2 from "../assets/Vec2.png";
 
 
 function Resourcescontent (){
@@ -27,13 +27,13 @@ function Resourcescontent (){
         }
     ];
     return(
-         <div>
+             <div className="w-full overflow-x-hidden">
             <Navbar />
-            <div  className='flex'>
+             <div className="flex flex-col md:flex-row">
                  <Sidebar />
-                 <div  className='flex-1 px-6 md:px-12 py-6'>
+                  <div className="flex-1 w-full p-4 md:p-6 md:mx-14">
                      <div className='mb-8 '>
-                            <h2 className='text-3xl font-bold pb-3'>
+                            <h2 className="text-2xl md:text-3xl font-bold">
                                 Resources
                             </h2>
                             <p className= "text-gray-600 mt-2">
@@ -53,7 +53,7 @@ function Resourcescontent (){
                                     <div  className="flex justify-between items-start">
                                         <div>
                                            <div className='flex justify-between '>
-                                             <h3 className='text-xl font-semibold'>
+                                             <h3 className="text-2xl md:text-3xl font-bold">
                                                 {item.title}
                                             </h3>
                                             <img src={item.icon} className="w-6 h-6" alt={item.title} />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import List from "../assets/List.png";
 import Vector1 from "../assets/Vector1.png";
@@ -18,21 +18,25 @@ import X from "../assets/X.png";
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
+  const navigate = useNavigate();
 
-
-    const navigate = useNavigate();
-
-   const handleLogout = () => {
+  const handleLogout = () => {
     setShowLogout(false);
     localStorage.removeItem("token");
     navigate("/");
   };
+
   return (
     <div
-      className={
-        ' border-r border-gray-300 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "w-56": "w-16"}'
-      }
+      className={`border-r border-gray-300 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "w-56" : "w-16"}`}
     >
+      <div
+        className={`flex flex-col gap-12 min-h-screen transition-all duration-300 ${isSidebarOpen ? "p-8 items-start" : "p-2 items-center"}`}
+      >
+        <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+          <div className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner hover:bg-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+            <img src={isSidebarOpen ? X : List} alt=" " />
+          </div>
       
       <div className = "">
       <div className={`p-8  max-w-[50]  items-start  gap-4 min-h-screen ${isSidebarOpen? "flex": "flex flex-col"}`}>
@@ -47,6 +51,18 @@ function Sidebar() {
         </div>
        
 
+        <div className="flex flex-col gap-4 w-full">
+          <Link to="/Dashboard">
+            <div
+              className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
+                isSidebarOpen
+                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
+                  : "justify-center py-3 hover:bg-orange-400"
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <div className="block group-hover:hidden w-5 h-5">
+                  <img src={Vector1} alt="" />
         <div className="flex flex-col gap-4 text-left">
           
           <Link to="/Dashboard">
@@ -61,17 +77,31 @@ function Sidebar() {
                src={Vector1} 
                alt="" />
                 </div>
-                <div  className="hidden group-hover:block w-5 h-5">
-                <img
-               src={vector1W} 
-               alt="" />
+                <div className="hidden group-hover:block w-5 h-5">
+                  <img src={vector1W} alt="" />
                 </div>
-               {isSidebarOpen && <p>Dashboard</p>}
-             
+                {isSidebarOpen && <p>Dashboard</p>}
               </div>
             </div>
           </Link>
+
           <Link to="/Recordingscontent">
+            <div
+              className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
+                isSidebarOpen
+                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
+                  : "justify-center py-3 hover:bg-orange-400"
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <div className="block group-hover:hidden w-5 h-5">
+                  <img src={Vector3} alt="" />
+                </div>
+                <div className="hidden group-hover:block w-5 h-5">
+                  <img src={vector2W} alt="" />
+                </div>
+                {isSidebarOpen && <p>Recordings</p>}
+              </div>
             <div className={`group flex p-2 items-center justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  " hover:bg-orange-400 hover:text-white"
@@ -94,24 +124,40 @@ function Sidebar() {
           </Link>
 
           <Link to="/Resourcescontent">
+            <div
+              className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
+                isSidebarOpen
+                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
+                  : "justify-center py-3 hover:bg-orange-400"
+              }`}
+            >
+              <div className="flex items-center gap-2">
             <div className={`group flex items-center p-2 justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  " hover:bg-orange-400 hover:text-white"
                 :"justify-center  hover:bg-orange-400"}`}>
               <div className= "flex items-start justify-center gap-2 ">
                 <div className="block group-hover:hidden w-5 h-5">
-                <img src={Vector2}  alt="" />
-                 </div>
+                  <img src={Vector2} alt="" />
+                </div>
                 <div className="hidden group-hover:block w-5 h-5">
-                <img src={vector3W}  alt="" />
-                 </div>
+                  <img src={vector3W} alt="" />
+                </div>
                 {isSidebarOpen && <p>Resources</p>}
               </div>
-             
             </div>
           </Link>
 
           <Link to="/Account">
+            <div
+              className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
+                isSidebarOpen
+                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
+                  : "justify-center py-3 hover:bg-orange-400"
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <div className="block group-hover:hidden w-5 h-5">
             <div className={`group flex items-center p-2 justify-center rounded-lg transition-all duration-200 cursor-pointer
                 ${isSidebarOpen?
                  " hover:bg-orange-400 hover:text-white"
@@ -131,17 +177,16 @@ function Sidebar() {
       </div>
       </div>
 
-     <div>
-         <Logout setShowLogout={setShowLogout}
-          isSidebarOpen={isSidebarOpen} />
-
-         <LogoutAlert
-          showLogout={showLogout} 
+      <div>
+        <Logout setShowLogout={setShowLogout} isSidebarOpen={isSidebarOpen} />
+        <LogoutAlert
+          showLogout={showLogout}
           setShowLogout={setShowLogout}
-           handleLogout={handleLogout} />
-     </div>
+          handleLogout={handleLogout}
+        />
+      </div>
     </div>
-    
   );
 }
+
 export default Sidebar;
