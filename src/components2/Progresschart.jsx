@@ -1,7 +1,9 @@
+import line from "../assets/line.png";
 function Progresschart() {
   return (
-    <div className="w-full h-full">
-      <div className="m-0 sm:m-2 p-4 sm:p-6 w-full lg:max-w-[507px] h-full border-gray-300 rounded-lg shadow-inner">
+    <div className="w-full  ">
+      <div className="m-0 sm:m-2 p-4 sm:p-6  lg:max-w-[507] h- border-gray-300 rounded-lg shadow-inner
+       hover:-translate-y-3 hover:shadow-lg transition-all duration-300 overflow-hidden">
         <div>
           <h2 className="text-lg sm:text-xl font-bold py-2 sm:py-4">
             Your Progress
@@ -10,7 +12,9 @@ function Progresschart() {
             Track your program completion over time
           </p>
         </div>
-        <div className="mt-4 sm:mt-0">Progress line chart</div>
+        <div className="mt-2 sm:mt-0  w-full overflow-hidden">
+          <img src={line} alt="" />
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import Navbar from "../components2/Navbar.jsx";
 import Sidebar from "../components2/Sidebar.jsx";
 import Vec1 from "../assets/Vec1.png";
@@ -5,27 +6,32 @@ import Alarm from "../assets/Alarm.png";
 import Vec2 from "../assets/Vec2.png";
 
 
-function Resourcescontent (){
-    const resources = [
-        {
-            title: "Track Curriculum",
-            description: "View the complete curriculum and class modules",
-            icon: {Vec1},
-            link: "Api link"
-        },
-        {
-            title: "Class Schedule",
-            description: "View your class timetable and upcoming sessions",
-            icon: {Alarm},
-            link: "Api link"
-        },
-        {
-            title: "Cohort Calendar",
-            description: "Important dates, deadlines and cohort events",
-            icon: {Vec2},
-            link: "Api link"
+
+    const BASE_URL = "https://lms-be-kc72.onrender.com/api";
+
+function Resourcescontent() {
+  const [resources, setResources] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    fetch(`${"https://lms-be-kc72.onrender.com/api"}/resources`, {
+      headers: { Authorization: `Bearer ${token}`
+     },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.data) {
+          setResources(data.data);
         }
-    ];
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching resources:", err);
+        setLoading(false);
+      });
+  }, [token]);
+    
     return(
              <div className="w-full overflow-x-hidden">
             <Navbar />
@@ -40,35 +46,34 @@ function Resourcescontent (){
                                 Access all links and materials for your track
                             </p>
                         </div>
-                        <div className='flex flex-col gap-2'>
-                            {resources.map((item, index) =>(
-                                <a
-                                key={index}
-                                 href={item.link}
-                                 target='_blank'
-                                 rel="noreferrer"
-                                 className='border border-gray-300 rounded-lg p-6 shadow-inner flex
-                                 items-center gap-4 cursor-pointer'
-                                 >
-                                    <div  className="flex justify-between items-start">
-                                        <div>
-                                           <div className='flex justify-between '>
-                                             <h3 className="text-2xl md:text-3xl font-bold">
-                                                {item.title}
-                                            </h3>
-                                            <img src={item.icon} className="w-6 h-6" alt={item.title} />
-                                           </div>
-                                            <p className='text-gray-600 mt-2'>
-                                                {item.description}
-                                            </p>
-                                        </div>
-                                         
-                                    </div>
-                                 </a>
-                            ))
-                            }
-                            
-                        </div>
+                        
+                       {loading ? (
+            <p>Loading resources...</p>
+          ) : resources.length === 0 ? (
+            <p className="text-gray-500">No resources available yet.</p>
+          ) : (
+            <div className="flex flex-col gap-2">
+              {resources.map((item) => (
+                <a
+                  key={item._id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-gray-300 rounded-lg p-6 shadow-inner flex items-center gap-4 cursor-pointer"
+                >
+                  <div className="flex flex-col gap-1">
+                    <div className="flex justify-between items-center gap-4">
+                      <h3 className="text-xl font-bold">{item.title}</h3>
+                      <span className="text-xs border border-gray-400 rounded px-2 py-1 text-gray-500">
+                        {item.type}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mt-1">{item.trackId?.name}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
 
                  </div>
                 

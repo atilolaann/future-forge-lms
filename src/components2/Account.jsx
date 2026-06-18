@@ -73,7 +73,7 @@ function Account() {
             </h2>
 
             {/* CHANGED: Removed strict w-[507]. Made it w-full on mobile, and lg:max-w-[507px] on large screens to preserve your original width constraint safely. Adjusted padding/margin for mobile. */}
-            <div className="m-0 sm:m-2 p-4 md:p-6 w-full lg:max-w-[507px] border-gray-300 rounded-lg shadow-inner h-full">
+            <div className="m-0 sm:m-2 p-4 md:p-6 w-full lg:max-w-[507] border-gray-300 rounded-lg shadow-inner h-full">
               {/* CHANGED: flex-col on mobile so the label stacks above the value. sm:flex-row places them side-by-side on larger screens. */}
               <div className="flex flex-col sm:flex-row w-full sm:items-center">
                 {/* CHANGED: w-full on mobile, sm:w-48 on larger screens. Adjusted vertical padding. */}
@@ -108,7 +108,7 @@ function Account() {
                   Enrolled Track
                 </p>
                 <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
-                  <p className="text-sm sm:text-base">Frontend Engineering</p>
+                  <p className="text-sm sm:text-base"> {userData?.trackId?.name}</p>
                   <img src={Lock} className="w-5 h-5 flex-shrink-0" alt="" />
                 </div>
               </div>
