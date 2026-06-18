@@ -14,7 +14,7 @@ function Welcomecard() {
           </p>
         </div>
         <div className="flex flex-col items-center mt-4 sm:mt-0 text-center">
-         <div className="w-40">
+         <div className="">
            <img src={radial} alt="" />
          </div>
           <p className="text-xs sm:text-sm text-gray-600 mt-2">
