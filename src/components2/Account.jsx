@@ -9,22 +9,21 @@ function Account() {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const token = localStorage.getItem("token");
-  console.log(token);
 
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    fetch("https://lms-be-kc72.onrender.com/api/auth/me", {
+    fetch("https://lms-be-kc72.onrender.com/api/users/profile", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data.user);
-        setUserData(data.data.user);
-        setNickname(data.data.user.nickname || "");
-        setPhoneNumber(data.data.user.phoneNumber);
+        console.log(data.data);
+        setUserData(data.data);
+        setNickname(data.data.nickname || "");
+        setPhoneNumber(data.data.phoneNumber);
       });
   }, []);
 
@@ -80,11 +79,11 @@ function Account() {
                 <p className="w-full sm:w-48 text-gray-800 py-2 sm:py-6">
                   Full name
                 </p>
-                <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
+                <div className="flex items-center gap-2  w-full sm:flex-1">
                   {/* CHANGED: text-sm on mobile, sm:text-base on larger screens */}
                   <p className="text-sm sm:text-base">{userData?.fullName}</p>
                   {/* ADDED: flex-shrink-0 so the icon doesn't get squeezed on small screens */}
-                  <img src={Lock} className="w-5 h-5 flex-shrink-0" alt="" />
+                  <img src={Lock} className="w-5 h-5 shrink-0" alt="" />
                 </div>
               </div>
 
@@ -93,12 +92,12 @@ function Account() {
                 <p className="w-full sm:w-48 text-gray-800 py-2 sm:py-6">
                   Email Address
                 </p>
-                <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
+                <div className="flex items-center gap-2  w-full sm:flex-1">
                   {/* ADDED: break-all on mobile so long email addresses don't break the layout, sm:break-normal to reset it */}
                   <p className="text-sm sm:text-base break-all sm:break-normal">
                     {userData?.email}
                   </p>
-                  <img src={Lock} className="w-5 h-5 flex-shrink-0" alt="" />
+                  <img src={Lock} className="w-5 h-5 shrink-0" alt="" />
                 </div>
               </div>
 
@@ -107,9 +106,12 @@ function Account() {
                 <p className="w-full sm:w-48 text-gray-800 pb-2 sm:pb-0">
                   Enrolled Track
                 </p>
-                <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
-                  <p className="text-sm sm:text-base"> {userData?.trackId?.name}</p>
-                  <img src={Lock} className="w-5 h-5 flex-shrink-0" alt="" />
+                <div className="flex items-center gap-2  w-full sm:flex-1">
+                  <p className="text-sm sm:text-base">
+                    {" "}
+                    {userData?.trackId?.name}
+                  </p>
+                  <img src={Lock} className="w-5 h-5 shrink-0" alt="" />
                 </div>
               </div>
 
@@ -118,15 +120,15 @@ function Account() {
                 <p className="w-full sm:w-48 text-gray-800 pb-2 sm:pb-0">
                   Username
                 </p>
-                <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
+                <div className="flex items-center gap-2  w-full sm:flex-1">
                   {/* ADDED: w-full so the input stretches properly. Adjusted text size for mobile. */}
                   <input
                     type="text"
                     value={nickname}
                     onChange={(e) => setNickname(e.target.value)}
-                    className="border rounded p-2 w-full text-sm sm:text-base"
+                    className="border rounded p-2 w-full max-w-sm text-sm sm:text-base"
                   />
-                  <img src={edit} className="w-5 h-5 flex-shrink-0" alt="" />
+                  <img src={edit} className="w-5 h-5 shrink-0" alt="" />
                 </div>
               </div>
 
@@ -135,16 +137,16 @@ function Account() {
                 <p className="w-full sm:w-48 text-gray-800 pb-2 sm:pb-0">
                   Phone Number
                 </p>
-                <div className="flex items-center gap-2 justify-between w-full sm:flex-1">
+                <div className="flex items-center gap-2 w-full sm:flex-1">
                   {/* ADDED: w-full to input for proper stretching */}
                   <input
                     type="text"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
-                    className="border rounded p-2 w-full text-sm sm:text-base"
+                    className="border rounded p-2 w-full max-w-sm text-sm sm:text-base"
                   />
 
-                  <img src={edit} className="w-5 h-5 flex-shrink-0" alt="" />
+                  <img src={edit} className="w-5 h-5 shrink-0" alt="" />
                 </div>
               </div>
 
