@@ -16,9 +16,11 @@ function Nav() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleDashboardClick = () => {
-    localStorage.setItem("token", "your_token_here");
-    navigate("/Dashboard");
+  const handleGetStarted = () => {
+    window.open(
+      "https://futureforge-project-snx5.vercel.app/registration-form/",
+      "_blank",
+    );
   };
 
   return (
@@ -56,8 +58,11 @@ function Nav() {
           <button className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200">
             <Link to="/Login">Log in</Link>
           </button>
-        
-          <button className="bg-orange-400 text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200">
+
+          <button
+            className="bg-orange-400 text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200"
+            onClick={handleGetStarted}
+          >
             Get started
           </button>
         </div>
