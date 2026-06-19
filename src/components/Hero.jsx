@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
 import landingpage2 from "../assets/landingpage2.png";
 
@@ -5,7 +6,11 @@ function Hero() {
   return (
     <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 mt-20">
       <main className="flex flex-col md:flex-row gap-10 md:gap-2 justify-between items-center min-h-[70vh] py-10 md:py-0">
-        <div className="w-full md:flex-1 max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
+        <motion.div
+        initial={{ x: -90, opacity:0}}
+         animate={{ x: 0, opacity:1}}
+         transition={{ duration: 0.8, delay: 0.5 }}
+         className="w-full md:flex-1 max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
             Learn, Track Progess,
             <br className="hidden sm:inline" /> Build Your Future
@@ -15,17 +20,27 @@ function Hero() {
             <br className="hidden md:inline" />
             Watch session recordings, track cohort progress.
           </p>
-          <button className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-6 py-3 rounded-lg mt-6">
+          <motion.button
+           initial={{ x: 90, opacity:0}}
+          animate={{ x: 0, opacity:1}}
+           transition={{ duration: 0.8, delay: 0.7 }}
+           whileHover={{scale:1.2}}
+           whileTap={{scale:0.95}}
+           className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-6 py-3 rounded-lg mt-6">
             <Link to="/Login"> Begin Journey</Link>
-          </button>
-        </div>
-        <div className="w-full md:flex-1 flex justify-center md:justify-end">
+          </motion.button>
+        </motion.div>
+        <motion.div
+        initial={{ x: 90, opacity:0}}
+         animate={{ x: 0, opacity:1}}
+        transition={{ duration: 0.8, delay: 0.5 }}
+         className="w-full md:flex-1 flex justify-center md:justify-end">
           <img
             src={landingpage2}
             className="max-w-137.5 w-full h-auto"
             alt=""
           />
-        </div>
+        </motion.div>
       </main>
     </div>
   );

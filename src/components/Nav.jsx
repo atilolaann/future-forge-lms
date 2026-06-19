@@ -26,7 +26,11 @@ function Nav() {
 
   return (
     <div className="relative">
-      <header className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
+      <motion.header
+      initial={{ y: -60, opacity:0}}
+      animate={{ y: 0, opacity:1}}
+      transition={{ duration: 0.5 }}
+      className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
         {/* Logo */}
         <div className="w-36 sm:w-44 md:w-52 lg:w-60 h-10">
           <img
@@ -39,57 +43,80 @@ function Nav() {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-6 lg:gap-8 text-gray-600">
-            <li className="hover:text-orange-400 transition-colors duration-200">
+            <motion.li 
+            whileHover={{ scale: 1.1}}
+            className="hover:text-orange-400 transition-colors duration-200">
               <Link to="/">Home</Link>
-            </li>
-            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+            </motion.li>
+            <motion.li
+             whileHover={{ scale: 1.1}}
+              className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
               About us
-            </li>
-            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+            </motion.li>
+            <motion.li 
+             whileHover={{ scale: 1.1}}
+            className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
               How it works
-            </li>
-            <li className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
+            </motion.li>
+            <motion.li
+             whileHover={{ scale: 1.1}}
+            className="hover:text-orange-400 transition-colors duration-200 cursor-pointer">
               Contact
-            </li>
+            </motion.li>
           </ul>
         </nav>
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex gap-3 lg:gap-5">
-          <button className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200">
+          <motion.button 
+          whileHover={{scale: 1.05}}
+          whileTap={{scale: 0.95 }}
+          className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200">
             <Link to="/Login">Log in</Link>
-          </button>
+          </motion.button>
 
-          <button
-            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200"
+          <motion.button
+           whileHover={{scale: 1.05}}
+          whileTap={{scale: 0.95 }}
+            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base
+             hover:bg-gray-500 transition-colors duration-200"
             onClick={handleGetStarted}
           >
             Get started
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Hamburger Button */}
-        <button
+        <motion.button
+         whileHover={{scale: 1.05}}
+          whileTap={{scale: 0.95 }}
           onClick={() => setToggle(true)}
           className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-orange-100 transition-colors duration-200"
         >
           <span className="block w-6 h-0.5 bg-gray-800"></span>
           <span className="block w-6 h-0.5 bg-gray-800"></span>
           <span className="block w-6 h-0.5 bg-gray-800"></span>
-        </button>
-      </header>
+        </motion.button>
+      </motion.header>
 
       {/* Mobile Menu Overlay */}
       {toggle && (
-        <div className="md:hidden absolute top-0 left-0 w-full bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] p-6 z-50 shadow-lg rounded-b-3xl">
+        <motion.div
+        initial={{opacity: 0, y: -20}}
+        animate={{ y: 0, opacity:1}}
+         transition={{ duration: 0.5 }}
+        
+        className="md:hidden absolute top-0 left-0 w-full bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] p-6 z-50 shadow-lg rounded-b-3xl">
           {/* Close Button */}
           <div className="flex justify-end mb-6">
-            <button
+            <motion.button
+             whileHover={{scale: 1.05}}
+          whileTap={{scale: 0.95 }}
               onClick={() => setToggle(false)}
               className="text-white font-semibold text-sm bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600 transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               ✕ Close
-            </button>
+            </motion.button>
           </div>
 
           {/* Mobile Nav Links */}
@@ -114,18 +141,24 @@ function Nav() {
 
           {/* Mobile Buttons */}
           <div className="flex flex-col gap-3">
-            <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full">
+            <motion.button
+             whileHover={{scale: 1.05}}
+             whileTap={{scale: 0.95 }}
+            
+            className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full">
               <Link to="/Login" onClick={() => setToggle(false)}>
                 Log in
               </Link>
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+             whileHover={{scale: 1.05}}
+             whileTap={{scale: 0.95 }}
              onClick={handleGetStarted}
              className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:text-white hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] transition-colors duration-200 w-full">
               Get started
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
