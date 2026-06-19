@@ -22,7 +22,7 @@ function About() {
             <br className="hidden md:inline" /> to those who dare to create,
           </p>
 
-          <button className="bg-orange-400 py-2 px-5 rounded-sm text-white">
+          <button className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-white">
             Learn More
           </button>
         </div>

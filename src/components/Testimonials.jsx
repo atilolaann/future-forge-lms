@@ -123,7 +123,7 @@ const Testimonials = () => {
       <div className="flex justify-center mt-10 md:mt-14">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="bg-[#F97316] hover:bg-orange-600 text-white font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
+          className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600 text-white font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
         >
           {showAll ? "See less" : "See more"}
         </button>

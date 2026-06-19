@@ -15,7 +15,7 @@ function Hero() {
             <br className="hidden md:inline" />
             Watch session recordings, track cohort progress.
           </p>
-          <button className="bg-orange-400 text-white px-6 py-3 rounded-lg mt-6">
+          <button className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-6 py-3 rounded-lg mt-6">
             <Link to="/Login"> Begin Journey</Link>
           </button>
         </div>

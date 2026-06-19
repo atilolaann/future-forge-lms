@@ -33,7 +33,7 @@ function Sidebar() {
         }`}
       >
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-          <div className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner hover:bg-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+          <div className="w-10 h-10 bg-white p-2 rounded-3xl shadow-inner hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:shadow-md transition-all duration-200 cursor-pointer">
             <img src={isSidebarOpen ? X : List} alt="" />
           </div>
         </button>
@@ -42,8 +42,8 @@ function Sidebar() {
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
-                  : "justify-center py-3 hover:bg-orange-400"
+                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
               <div className="block group-hover:hidden w-5 h-5">
@@ -59,8 +59,8 @@ function Sidebar() {
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
-                  : "justify-center py-3 hover:bg-orange-400"
+                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
               <div className="block group-hover:hidden w-5 h-5">
@@ -76,8 +76,8 @@ function Sidebar() {
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
-                  : "justify-center py-3 hover:bg-orange-400"
+                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
               <div className="block group-hover:hidden w-5 h-5">
@@ -93,8 +93,8 @@ function Sidebar() {
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-orange-400 hover:text-white"
-                  : "justify-center py-3 hover:bg-orange-400"
+                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
               <div className="block group-hover:hidden w-5 h-5">

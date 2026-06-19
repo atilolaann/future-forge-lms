@@ -153,7 +153,7 @@ function Account() {
               {/* CHANGED: Added mt-4 for mobile spacing, mt-0 on sm to reset. w-full makes it stretch across the mobile screen, sm:w-auto returns it to normal size. */}
               <button
                 onClick={handleUpdate}
-                className="bg-orange-500 text-white px-4 py-2 mt-4 sm:mt-0 rounded w-full sm:w-auto"
+                className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 py-2 mt-4 sm:mt-0 rounded w-full sm:w-auto"
               >
                 Save Changes
               </button>

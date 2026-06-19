@@ -21,7 +21,7 @@ function LogoutAlert({ showLogout, setShowLogout, handleLogout }) {
           </button>
           <button
             onClick={handleLogout}
-            className="bg-orange-400 text-white px-4 py-2 w-full sm:w-auto rounded-md hover:bg-orange-500"
+            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 py-2 w-full sm:w-auto rounded-md hover:bg-orange-500"
           >
             Logout
           </button>

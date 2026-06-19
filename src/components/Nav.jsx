@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { Link, useNavigate } from "react-router-dom";
 import logo3 from "../assets/logo3.png";
 import { useState, useEffect } from "react";
@@ -18,7 +19,7 @@ function Nav() {
 
   const handleGetStarted = () => {
     window.open(
-      "https://futureforge-project-snx5.vercel.app/registration-form/",
+      "https://futureforge-project-snx5.vercel.app/",
       "_blank",
     );
   };
@@ -60,7 +61,7 @@ function Nav() {
           </button>
 
           <button
-            className="bg-orange-400 text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200"
+            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-orange-500 transition-colors duration-200"
             onClick={handleGetStarted}
           >
             Get started
@@ -80,12 +81,12 @@ function Nav() {
 
       {/* Mobile Menu Overlay */}
       {toggle && (
-        <div className="md:hidden absolute top-0 left-0 w-full bg-orange-400 p-6 z-50 shadow-lg rounded-b-3xl">
+        <div className="md:hidden absolute top-0 left-0 w-full bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] p-6 z-50 shadow-lg rounded-b-3xl">
           {/* Close Button */}
           <div className="flex justify-end mb-6">
             <button
               onClick={() => setToggle(false)}
-              className="text-white font-semibold text-sm bg-orange-500 hover:bg-orange-600 transition-colors duration-200 px-4 py-2 rounded-lg"
+              className="text-white font-semibold text-sm bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600 transition-colors duration-200 px-4 py-2 rounded-lg"
             >
               ✕ Close
             </button>
@@ -118,7 +119,9 @@ function Nav() {
                 Log in
               </Link>
             </button>
-            <button className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors duration-200 w-full">
+            <button
+             onClick={handleGetStarted}
+             className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:text-white hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] transition-colors duration-200 w-full">
               Get started
             </button>
           </div>

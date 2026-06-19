@@ -3,7 +3,7 @@ import SignOutB from "../assets/SignOutB.png";
 
 function Logout({ setShowLogout, isSidebarOpen }) {
   return (
-    <div className=" rounded-md flex m-2 sm:m-4 p-1 sm:p-2 max-w-[200px] hover:bg-orange-400 hover:text-white transition-all duration-200 cursor-pointer">
+    <div className=" rounded-md flex m-2 sm:m-4 p-1 sm:p-2 max-w-[200px] hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white transition-all duration-200 cursor-pointer">
       <button
         className="text-white flex items-center gap-2 sm:gap-3 p-1 sm:p-2"
         onClick={() => setShowLogout(true)}

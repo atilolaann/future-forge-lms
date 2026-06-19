@@ -1,6 +1,13 @@
 import React from "react";
 
 const CTA = () => {
+
+   const handleGetStarted = () => {
+    window.open(
+      "https://futureforge-project-snx5.vercel.app/",
+      "_blank",
+    );
+  };
   return (
     <section className="w-full px-4 py-8 sm:px-6 md:py-16 flex justify-center font-['Gadugi',_sans-serif]">
       <div
@@ -21,7 +28,7 @@ const CTA = () => {
         </div>
 
         <a
-          href="/login"
+           onClick={handleGetStarted}
           className="bg-[#000000] text-white flex items-center justify-center w-[166px] h-[54px] rounded-[10px] hover:bg-neutral-800 transition-colors cursor-pointer no-underline shrink-0"
         >
           Get started
