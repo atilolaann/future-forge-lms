@@ -25,9 +25,9 @@ function Features() {
       <div className="flex flex-col md:flex-row gap-5 w-full mt-6">
         <motion.div 
         initial={{ opacity: 0, y: 40 }}
-         whileHover={{ opacity: 1, y: 0 }}
+         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-         viewport={{once: true}}
+      
         className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src={Vector}
