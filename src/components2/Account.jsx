@@ -29,7 +29,7 @@ function Account() {
 
   const handleUpdate = async () => {
     const response = await fetch(
-      "https://lms-be-kc72.onrender.com/api/users/me",
+      "https://lms-be-kc72.onrender.com/api/users/profile",
       {
         method: "PUT",
         headers: {
