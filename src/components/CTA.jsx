@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 
 const CTA = () => {
 
@@ -27,12 +28,14 @@ const CTA = () => {
           </p>
         </div>
 
-        <a
+        <motion.a
+        whileHover={{scale:1.05, y: -2}}
+        whileTap={{scale: 0.95}}
            onClick={handleGetStarted}
           className="bg-[#000000] text-white flex items-center justify-center w-[166px] h-[54px] rounded-[10px] hover:bg-neutral-800 transition-colors cursor-pointer no-underline shrink-0"
         >
           Get started
-        </a>
+        </motion.a>
       </div>
     </section>
   );

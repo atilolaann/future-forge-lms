@@ -11,9 +11,9 @@ function About() {
          <img src={page1} className="w-full md:w-[50%]" alt="" />
         {/* 3. Text Box: Adjusted margins so text doesn't touch the screen edges on mobile */}
         <motion.div 
-        initial={{ x: -90, opacity:0}}
+        initial={{ x: 90, opacity:0}}
          whileInView={{ x: 0, opacity:1}}
-         transition={{ duration: 0.8, delay: 0.5 }}
+         transition={{ duration: 0.8, delay: 0.3 }}
          viewport={{once: true}}
         className="mx-6 my-6 md:mx-8 md:my-0">
           {/* 4. Heading: Slightly smaller on mobile so it fits, large on desktop */}
@@ -29,9 +29,9 @@ function About() {
           </p>
 
           <motion.button
-           initial={{ x: -90, opacity:0}}
+           initial={{ x: 90, opacity:0}}
            whileInView={{ x: 0, opacity:1}}
-           transition={{ duration: 0.8, delay: 0.5 }}
+           transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{once: true}}
            className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-white">
             Learn More

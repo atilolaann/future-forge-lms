@@ -62,7 +62,7 @@ function Recordingscontent() {
                 {recordings.map((recording) => (
                   <div
                     key={recording._id}
-                    className="border border-gray-300 rounded-lg p-4 w-full shadow-inner flex items-center justify-between gap-2 cursor-pointer"
+                    className="border border-gray-300 rounded-lg p-4 w-full shadow-inner flex items-center justify-between gap-2 cursor-pointer mb-4"
                   >
                     <div className="flex gap-4 w-full">
                       <img

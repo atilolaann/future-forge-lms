@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"
 import sarah from "../assets/Sarah.png";
 import michael from "../assets/Michael.png";
 import amra from "../assets/Amra.png";
@@ -74,14 +75,45 @@ const StarRating = () => {
 };
 
 const TestimonialCard = ({ testimonial }) => {
+
+      
+    const containerVariants = {
+      hidden: {},
+      show: {
+        transition: {
+          staggerChildren: 0.2,
+        },
+      },
+    };
+    const cardVariants={
+      hidden:{
+        opacity: 0,
+        y: 30,
+      },
+      show:{
+        opacity: 1,
+        y: 0,
+        transition:{
+          duration:0.6,
+        },
+      },
+    };
   return (
-    <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[68px] w-full max-w-[393px] h-full mx-auto">
-      <div className="border border-orange-300 rounded-[30px] p-6 bg-white flex flex-col justify-between grow shadow-sm">
+    <motion.div
+     variants={{containerVariants}}
+      initial="hidden"
+      whileInView="show"
+      viewport={{once: true}}
+     className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[68px] w-full max-w-[393px] h-full mx-auto">
+      <motion.div 
+      variants={cardVariants}
+      whileHover={{y: -10, scale: 1.02,}}
+      className="border border-orange-300 rounded-[30px] p-6 bg-white flex flex-col justify-between grow shadow-sm">
         <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[28px] text-[#1F3D34] font-normal m-0">
           {testimonial.review}
         </p>
         <StarRating />
-      </div>
+      </motion.div>
 
       <div className="flex items-center gap-3 px-2">
         <img
@@ -98,7 +130,7 @@ const TestimonialCard = ({ testimonial }) => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -110,9 +142,14 @@ const Testimonials = () => {
 
   return (
     <section className="py-12 px-4 sm:px-8 md:px-10 bg-white max-w-[1440px] mx-auto">
-      <h2 className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-black mb-8 md:mb-12 max-w-[362px] text-left">
+      <motion.h2
+      initial={{opacity: 0, y:20}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true}}
+      transition={{duration: 0.6}}
+      className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-black mb-8 md:mb-12 max-w-[362px] text-left">
         Hear What They Say About Us
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
         {visibleTestimonials.map((testimonial) => (
@@ -121,12 +158,14 @@ const Testimonials = () => {
       </div>
 
       <div className="flex justify-center mt-10 md:mt-14">
-        <button
+        <motion.button
+        whileHover={{scale:1.05, y: -2}}
+        whileTap={{scale: 0.95}}
           onClick={() => setShowAll(!showAll)}
           className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600 text-white font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
         >
           {showAll ? "See less" : "See more"}
-        </button>
+        </motion.button>
       </div>
     </section>
   );

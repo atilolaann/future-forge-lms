@@ -4,6 +4,26 @@ import GraduationCap from "../assets/GraduationCap.png";
 import Microphone from "../assets/Microphone.png";
 
 function Features() {
+    const containerVariants = {
+      hidden: {},
+      show: {
+        transition: {
+          staggerChildren: 0.15,
+        },
+      },
+    };
+    const cardVariants={
+      hidden:{
+        opacity: 0,
+        y: 30,
+      },
+      show:{
+        opacity: 1,
+        y: 0,
+      }
+    };
+
+
   return (
     <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-16">
       <div className="py-5 w-full md:max-w-[70%] lg:max-w-[50%] text-center md:text-left">
@@ -22,14 +42,22 @@ function Features() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-5 w-full mt-6">
+      <motion.div
+      variants={{containerVariants}}
+      initial="hidden"
+      whileInView="show"
+      viewport={{once: true}}
+      
+      className="flex flex-col md:flex-row gap-5 w-full mt-6">
         <motion.div 
-        initial={{ opacity: 0, y: 40 }}
-         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
+        variants={{cardVariants}}
+        transition={{ duration: 0.5, ease:"easeOut"}}
+        whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
       
         className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
-          <img
+          <motion.img
+            whileHover={{rotate:10, scale:1.1,}}
+            transition={{type:"spring",stiffness: 300,}}
             src={Vector}
             className="bg-orange-400 w-10 p-2 rounded-full my-2"
             alt=""
@@ -44,12 +72,13 @@ function Features() {
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-         viewport={{once: true}}
+          variants={{cardVariants}}
+        transition={{ duration: 0.5, ease:"easeOut"}}
+        whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
         className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
-          <img
+          <motion.img
+           whileHover={{rotate:10, scale:1.1,}}
+            transition={{type:"spring",stiffness: 300,}}
             src={GraduationCap}
             className="bg-orange-400 w-10 p-2 rounded-full my-2"
             alt=""
@@ -64,12 +93,13 @@ function Features() {
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0, y: 40 }}
-         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-         viewport={{once: true}}
+          variants={{cardVariants}}
+        transition={{ duration: 0.5, ease:"easeOut"}}
+        whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
         className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
-          <img
+          <motion.img
+           whileHover={{rotate:10, scale:1.1,}}
+            transition={{type:"spring",stiffness: 300,}}
             src={Microphone}
             className="bg-orange-400 w-10 p-2 rounded-full my-2"
             alt=""
@@ -82,7 +112,7 @@ function Features() {
             goal.
           </p>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 }

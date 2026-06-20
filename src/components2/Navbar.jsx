@@ -32,7 +32,7 @@ function Navbar({ userData }) {
           <img src={Frame} className="w-8 h-8 sm:w-10 sm:h-10" alt="" />
 
           <div
-            className="w-7 h-7 sm:w-8 sm:h-8 text-xs sm:text-sm rounded-full bg-blue-500 text-white flex items-center justify-center cursor-pointer"
+            className="w-7 h-7 sm:w-8 sm:h-8 text-xs sm:text-sm rounded-full bg-orange-400 text-white flex items-center justify-center cursor-pointer"
             onClick={() => navigate("/Account")}
           >
             {initials}
