@@ -7,6 +7,7 @@ import Progresschart from "../components2/Progresschart.jsx";
 import Recordingscard from "../components2/Recordingscard.jsx";
 import Resourcescard from "../components2/Resourcescard.jsx";
 import Summarycard from "../components2/Summarycard.jsx";
+import SessionTimeout from "../components2/SessionTimeout.jsx";
 
 
 

@@ -17,7 +17,7 @@ function SessionTimeout() {
           alert("Session expired. Please login again.");
           navigate("/login");
         },
-        20 * 60 * 1000,
+        5 * 60 * 1000,
       ); // 20 minutes
     };
 
