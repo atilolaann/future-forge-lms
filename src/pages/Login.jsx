@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftSIdeLogin from "../components/LeftSIdeLogin";
@@ -79,6 +80,11 @@ function Login() {
     return valid;
   };
 
+  const inputVariants = {
+    hidden:{opacity: 0, y: 20},
+    show: {opacity:1, y:0}
+  }
+
   return (
     <main
       className="bg-white flex  w-screen min-h-screen "
@@ -86,14 +92,19 @@ function Login() {
     >
       <LeftSIdeLogin />
 
-      <section className="bg-white p-6 flex flex-1 items-center justify-center ">
+      <motion.section
+       initial={{opacity:0, x: 50}}
+        animate={{opacity:1, x: 0}}
+        transition={{duration: 0.8, delay:0.2 }}
+      className="bg-white p-6 flex flex-1 items-center justify-center  ">
         <div className="w-92.25">
           <h2 className="text-4xl font-bold ">Welcome back</h2>
           <p className="text-[20px] font-normal">Sign in to your account</p>
 
           <div className="flex flex-col mt-16">
             <label className="font-normal text-md mb-2">Email</label>
-            <input
+            <motion.input
+              variants={inputVariants}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -154,7 +165,7 @@ function Login() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }

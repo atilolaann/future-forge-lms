@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import LoginLogo from "../assets/login-logo.png";
 import login from "../assets/login.png";
 
@@ -6,13 +7,17 @@ function LoginA() {
     <div className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] flex-1 mim-h-screen overflow-y-auto">
       <section className="p-10 text-white flex items-center flex-col justify-center gap-10 2xl:gap-16 h-full">
         {/* Logo */}
-        <div className="w-136 h-25">
+        <motion.div
+        initial={{opacity:0, x: -50}}
+        animate={{opacity:1, x: 0}}
+        transition={{duration: 0.8 }}
+        className="w-136 h-25">
           <img
             src={LoginLogo}
             className="w-full h-full object-contain"
             alt="futureforge logo"
           />
-        </div>
+        </motion.div>
 
         {/* Login Image */}
         <div className="w-136 h-auto">
