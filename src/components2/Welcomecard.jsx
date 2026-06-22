@@ -2,7 +2,7 @@ import radial from "../assets/radial.png";
 function Welcomecard() {
   return (
     <div className="w-full ">
-      <div className="m-0 sm:m-2 p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between w-full h-full   rounded-lg shadow-inner hover:-translate-y-3 hover:shadow-lg transition-all duration-300">
+      <div className="m-0 sm:m-2 p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between w-full h-full rounded-lg shadow-inner hover:-translate-y-3 hover:shadow-lg transition-all duration-300">
         <div>
           <h3 className="py-2 sm:py-4 text-lg sm:text-xl font-bold">
             Week 4/10
