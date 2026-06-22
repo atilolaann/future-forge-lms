@@ -19,7 +19,7 @@ function SessionTimeout() {
           navigate("/login");
         },
         15 * 60 * 1000,
-      ); // 20 minutes
+      ); // 15 minutes
     };
 
     window.addEventListener("mousemove", resetTimer);
