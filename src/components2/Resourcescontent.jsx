@@ -32,7 +32,8 @@ function Resourcescontent() {
   return (
     <div className="w-full overflow-x-hidden">
       <Navbar />
-      <div className="flex flex-col md:flex-row">
+      {/* Side-by-side layout for Sidebar and Content */}
+      <div className="flex">
         <Sidebar />
         <div className="flex-1 w-full p-4 md:p-6 md:mx-14">
           <div className="mb-8 ">

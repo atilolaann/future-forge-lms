@@ -49,8 +49,8 @@ function Account() {
     // ADDED: w-full and overflow-x-hidden to prevent horizontal scrolling on mobile devices
     <div className="w-full overflow-x-hidden">
       <Navbar />
-      {/* CHANGED: flex-col on mobile so Sidebar is on top, md:flex-row to put them side-by-side on medium screens and up */}
-      <div className="flex flex-col md:flex-row">
+      {/* Side-by-side layout for Sidebar and Content */}
+      <div className="flex">
         <Sidebar />
         {/* CHANGED: Reduced margin on mobile (m-4), restored original on medium screens (md:m-8). Added md:flex-1 to take up remaining space. */}
         <div className="m-4 md:m-8 w-full md:flex-1">

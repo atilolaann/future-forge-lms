@@ -29,7 +29,8 @@ function Recordingscontent() {
   return (
     <div className="w-full overflow-x-hidden">
       <Navbar />
-      <div className="flex flex-col md:flex-row">
+      {/* Side-by-side layout for Sidebar and Content */}
+      <div className="flex">
         <Sidebar />
         <div className="p-4 md:p-6 w-full flex-1">
           <div className="w-full">
