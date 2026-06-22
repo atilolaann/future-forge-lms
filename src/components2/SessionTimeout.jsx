@@ -8,6 +8,7 @@ function SessionTimeout() {
     let timeout;
 
     const resetTimer = () => {
+      
       clearTimeout(timeout);
 
       timeout = setTimeout(

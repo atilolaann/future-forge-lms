@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import Resourcescontent from "./components2/Resourcescontent.jsx";
 import Recordingscontent from "./components2/Recordingscontent.jsx";
+import SessionTimeout from "./components2/SessionTimeout.jsx";
 import Account from "./components2/Account.jsx";
 import { Toaster } from "sonner";
 

@@ -10,8 +10,6 @@ import Summarycard from "../components2/Summarycard.jsx";
 import SessionTimeout from "../components2/SessionTimeout.jsx";
 
 
-
-
 function Dashboard() {
   const [userData, setUserData] = useState(null);
   const token = localStorage.getItem("token");
@@ -50,6 +48,7 @@ function Dashboard() {
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden bg-gray-50">
+      
       <Navbar userData={userData} />
 
       {/* Side-by-side layout for Sidebar and Content */}
