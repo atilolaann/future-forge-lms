@@ -28,7 +28,7 @@ function App() {
             }
           />
           <Route
-            path="/dashboard"
+            path="/account"
             element={
               <ProtectedRoute>
                 <Account />
@@ -36,7 +36,7 @@ function App() {
             }
           />
           <Route
-            path="/dashboard"
+            path="/resourcescontent"
             element={
               <ProtectedRoute>
                 <Resourcescontent />
@@ -44,7 +44,7 @@ function App() {
             }
           />
           <Route
-            path="/dashboard"
+            path="/recordingscontent"
             element={
               <ProtectedRoute>
                 <Recordingscontent />
