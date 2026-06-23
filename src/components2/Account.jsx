@@ -27,6 +27,22 @@ function Account() {
       });
   }, []);
 
+   //profile fetch
+   useEffect(() => {
+    fetch(`${"https://lms-be-kc72.onrender.com/api"}/users/profile`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.data) {
+          setUserData(data.data);
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching resources:", err);
+      });
+  }, [token]);
+
   const handleUpdate = async () => {
     const response = await fetch(
       "https://lms-be-kc72.onrender.com/api/users/profile",
@@ -48,7 +64,7 @@ function Account() {
   return (
     // ADDED: w-full and overflow-x-hidden to prevent horizontal scrolling on mobile devices
     <div className="w-full overflow-x-hidden">
-      <Navbar />
+      <Navbar userData={userData} />
       {/* Side-by-side layout for Sidebar and Content */}
       <div className="flex">
         <Sidebar />

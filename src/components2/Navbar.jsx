@@ -1,9 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import logo3 from "../assets/logo3.png";
 import Frame from "../assets/Frame.png";
 
 function Navbar({ userData }) {
+
   const navigate = useNavigate();
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const notifications = [
+    "New resources uploaded",
+    " Week 5 recording is available"
+  ];
 
   const initials = userData?.fullName
     ? userData.fullName
@@ -29,7 +37,35 @@ function Navbar({ userData }) {
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <img src={Frame} className="w-8 h-8 sm:w-10 sm:h-10" alt="" />
+          <div className="relative">
+            <img
+             onClick = {() => setShowNotifications(!showNotifications)}
+            src={Frame} className="w-8 h-8 sm:w-10 sm:h-10" alt="" />
+           
+
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            {notifications.length}
+          </span>
+
+          {showNotifications &&(
+            <div className="absolute right-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+      <div className="p-3 border-b">
+        <h3 className="font-semibold">Notifications</h3>
+      </div>
+      <div className="max-h-60 overflow-y-auto">
+        {notifications.map((note, index) => (
+          <div
+            key={index}
+            className="p-3 border-b hover:bg-gray-50"
+          >
+            {note}
+          </div>
+        ))}
+      </div>
+    </div>
+          )}
+          </div>
+          
 
           <div
             className="w-7 h-7 sm:w-8 sm:h-8 text-xs sm:text-sm rounded-full bg-orange-400 text-white flex items-center justify-center cursor-pointer"

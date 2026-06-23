@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 function Recordingscontent() {
   const [recordings, setRecordings] = useState([]);
+   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem("token");
 
@@ -26,9 +27,25 @@ function Recordingscontent() {
       });
   }, [token]);
 
+       //profile fetch
+   useEffect(() => {
+    fetch(`${"https://lms-be-kc72.onrender.com/api"}/users/profile`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.data) {
+          setUserData(data.data);
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching resources:", err);
+      });
+  }, [token]);
+
   return (
     <div className="w-full overflow-x-hidden">
-      <Navbar />
+      <Navbar userData={userData}/>
       {/* Side-by-side layout for Sidebar and Content */}
       <div className="flex">
         <Sidebar />
