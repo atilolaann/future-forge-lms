@@ -109,7 +109,8 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email"
-              className="border rounded-[10px] border-orange-600 px-2 h-15 text-black"
+              className="border rounded-[10px] border-orange-600 px-2 h-15  text-black hover:border-2 hover:border-orange-400
+              focus:outline-none focus:ring-0 focus:border-orange-400"
             />
             {emailError && (
               <p className="text-red-500 text-sm mt-2">{emailError}</p>
@@ -123,7 +124,8 @@ function Login() {
               type={visible ? "text" : "password"}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
-              className="border rounded-[10px] border-orange-600 px-2 h-15 text-black"
+              className="border rounded-[10px] border-orange-600 px-2 h-15 text-black hover:border-2 hover:border-orange-400
+              focus:outline-none focus:ring-0 focus:border-orange-400"
             />
             {passwordError && (
               <p className="text-red-500 text-sm mt-2">{passwordError}</p>

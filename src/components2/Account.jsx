@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 import Navbar from "../components2/Navbar.jsx";
 import Sidebar from "../components2/Sidebar.jsx";
 import Lock from "../assets/Lock.png";
@@ -7,6 +8,9 @@ import edit from "../assets/edit.png";
 function Account() {
   const [nickname, setNickname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [originalNickname, setOriginalNickname] = useState("");
+  const [originalPhoneNumber, setOriginalPhoneNumber] = useState("")
+  const [isSaving, setIsSaving] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -21,9 +25,15 @@ function Account() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data.data);
+        if (data && data.data){
         setUserData(data.data);
+
         setNickname(data.data.nickname || "");
-        setPhoneNumber(data.data.phoneNumber);
+        setPhoneNumber(data.data.phoneNumber||"");
+
+        setOriginalNickname(data.data.nickname || "");
+        setOriginalPhoneNumber(data.data.phoneNumber||"");
+        }
       });
   }, []);
 
@@ -43,7 +53,20 @@ function Account() {
       });
   }, [token]);
 
+
+    const hasChanges = 
+      nickname !== originalNickname ||
+      phoneNumber !== originalPhoneNumber;
+
   const handleUpdate = async () => {
+  if (!hasChanges) {
+    toast.info("No changes made");
+    return;
+  }
+
+  try {
+    setIsSaving(true);
+
     const response = await fetch(
       "https://lms-be-kc72.onrender.com/api/users/profile",
       {
@@ -56,11 +79,30 @@ function Account() {
           nickname,
           phoneNumber,
         }),
-      },
+      }
     );
+
     const data = await response.json();
-    console.log(data);
-  };
+
+    if (response.ok) {
+      setOriginalNickname(nickname);
+      setOriginalPhoneNumber(phoneNumber);
+
+      toast.success("Profile updated successfully!");
+
+      console.log(data);
+    } else {
+      toast.error("Failed to update profile");
+    }
+  } catch (error) {
+    console.error(error);
+    toast.error("Something went wrong");
+  } finally {
+    setIsSaving(false);
+  }
+};
+
+   
   return (
     // ADDED: w-full and overflow-x-hidden to prevent horizontal scrolling on mobile devices
     <div className="w-full overflow-x-hidden">
@@ -169,9 +211,12 @@ function Account() {
               {/* CHANGED: Added mt-4 for mobile spacing, mt-0 on sm to reset. w-full makes it stretch across the mobile screen, sm:w-auto returns it to normal size. */}
               <button
                 onClick={handleUpdate}
-                className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 py-2 mt-4 sm:mt-0 rounded w-full sm:w-auto"
+                disabled = {!hasChanges|| isSaving }
+                className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 py-2 mt-4 sm:mt-0 rounded w-full sm:w-auto
+                disabled:opacity-50 disabled:cursor-not-allowed
+                "
               >
-                Save Changes
+                {isSaving? "Saving...":"Save Changes"}
               </button>
             </div>
           </div>

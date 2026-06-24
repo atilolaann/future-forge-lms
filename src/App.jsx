@@ -53,7 +53,17 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-      <Toaster />
+      <Toaster
+      position="top-right"
+      closeButton
+      toastOptions={{
+        style: {
+          background: "ffffff",
+          color:"#FDBA74",
+          border: "none",
+        },
+      }}
+      />
     </div>
   );
 }

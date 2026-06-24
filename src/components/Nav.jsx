@@ -30,7 +30,7 @@ function Nav() {
       initial={{ y: -60, opacity:0}}
       animate={{ y: 0, opacity:1}}
       transition={{ duration: 0.5 }}
-      className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-8 lg:px-16">
+      className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-4 lg:px-8">
         {/* Logo */}
         <div className="w-36 sm:w-44 md:w-52 lg:w-60 h-10">
           <img
