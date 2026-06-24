@@ -69,7 +69,7 @@ function Recordingscontent() {
           </div>
           <div>
             <h2 className="text-lg md:text-xl font-bold mt-6 md:mt-8 mb-2 md:mb-4">
-              All Recorded Session
+              All Recorded Sessions
             </h2>
             {loading ? (
               <p>Loading recordings...</p>
@@ -80,37 +80,38 @@ function Recordingscontent() {
                 {recordings.map((recording) => (
                   <div
                     key={recording._id}
-                    className="border border-gray-300 rounded-lg p-4 w-full shadow-inner flex items-center justify-between gap-2 cursor-pointer mb-4"
+                    className="border border-gray-300 rounded-lg p-4 w-full shadow-inner hover:shadow-md
+                    transition-all duration-300  cursor-pointer mb-4"
                   >
-                    <div className="flex gap-4 w-full">
+                    <div className="flex flex-col md:flex-row gap-4 w-full">
                       <img
                         src={`https://img.youtube.com/vi/${new URL(recording.url).searchParams.get("v")}/0.jpg`}
                         alt={recording.title}
-                        className="w-24 h-20 rounded-lg"
+                        className="w-full md:w-24 h-44 md:h-20 rounded-lg object-cover"
                       />
-                      <div className="flex flex-col flex-1 gap-4 justify-between">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold">
+                      <div className="flex flex-col flex-1 gap-2">
+                        <div className="flex items-start justify-between gap-3">
+                          <h3 className="text-base md:text-lg font-semibold ">
                             {recording.title}
                           </h3>
                           <div>
-                            <button className="flex gap-2 rounded-lg  border border-orange-400 p-2 ml-auto">
-                              <img
-                                src={Group}
-                                alt="play icon"
-                                className="w-7 h-5 "
-                              />
-                              <a
+                               <a
                                 href={recording.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-2 md:w-fit shrink-0 rounded-lg 
+                                border border-orange-400 px-2 py-1 md:px-4 md:py-3 text-xs md:text-sm whitespace-nowrap"
                               >
+                                <img
+                                  src={Group}
+                                  alt="play icon"
+                                  className="w-4 h-4 md:w-5 md:h-5"
+                                />
                                 Watch on Youtube
                               </a>
-                            </button>
                           </div>
                         </div>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-sm md:text-base">
                           {recording.trackid?.name}
                         </p>
                         <p className="text-gray-500 text-sm">

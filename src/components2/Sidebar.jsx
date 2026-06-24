@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import List from "../assets/List.png";
 import Vector1 from "../assets/Vector1.png";
@@ -38,74 +38,99 @@ function Sidebar() {
           </div>
         </button>
         <div className="flex flex-col gap-4 w-full">
-          <Link to="/Dashboard">
+          <NavLink to="/Dashboard">
+          {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
-                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
+                  ? "gap-3 px-3 py-2 "
+                  : "justify-center py-3 "
+              }
+              ${
+                isActive
+                  ? "bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  :"hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
-              <div className="block group-hover:hidden w-5 h-5">
-                <img src={Vector1} alt="" />
+              <div className="w-5 h-5">
+                <img src={isActive? vector1W :Vector1} alt="" />
               </div>
-              <div className="hidden group-hover:block w-5 h-5">
-                <img src={vector1W} alt="" />
-              </div>
-              {isSidebarOpen && <p>Dashboard</p>}
+              
+              {isSidebarOpen && ( <p className={isActive? "text-white":"group-hover:text-white"}>Dashboard</p>
+            )}
             </div>
-          </Link>
-          <Link to="/Resourcescontent">
+            )}
+          </NavLink>
+          <NavLink to="/Resourcescontent">
+          {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
-                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
+                  ? "gap-3 px-3 py-2 "
+                  : "justify-center py-3 "
+              }
+              ${
+                isActive
+                  ? "bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  :"hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
-              <div className="block group-hover:hidden w-5 h-5">
-                <img src={Vector2} alt="" />
+               <div className="w-5 h-5">
+                <img src={isActive? vector2W :Vector2} alt="" />
               </div>
-              <div className="hidden group-hover:block w-5 h-5">
-                <img src={vector2W} alt="" />
-              </div>
-              {isSidebarOpen && <p>Resources</p>}
+              
+              {isSidebarOpen && ( <p className={isActive? "text-white":"group-hover:text-white"}>Resources</p>
+            )}
             </div>
-          </Link>
-          <Link to="/Recordingscontent">
+            )}
+            
+          </NavLink>
+          <NavLink to="/Recordingscontent">
+           {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
-                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
+                  ? "gap-3 px-3 py-2 "
+                  : "justify-center py-3 "
+              }
+              ${
+                isActive
+                  ? "bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  :"hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
-              <div className="block group-hover:hidden w-5 h-5">
-                <img src={Vector3} alt="" />
+               <div className="w-5 h-5">
+                <img src={isActive? vector3W :Vector3} alt="" />
               </div>
-              <div className="hidden group-hover:block w-5 h-5">
-                <img src={vector3W} alt="" />
-              </div>
-              {isSidebarOpen && <p>Recordings</p>}
+              
+              {isSidebarOpen && ( <p className={isActive? "text-white":"group-hover:text-white"}>Recordings</p>
+            )}
             </div>
-          </Link>
-          <Link to="/Account">
+            )}
+          </NavLink>
+          <NavLink to="/Account">
+            {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
                 isSidebarOpen
-                  ? "gap-3 px-3 py-2 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
-                  : "justify-center py-3 hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
+                  ? "gap-3 px-3 py-2 "
+                  : "justify-center py-3 "
+              }
+              ${
+                isActive
+                  ? "bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:text-white"
+                  :"hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]"
               }`}
             >
-              <div className="block group-hover:hidden w-5 h-5">
-                <img src={Vector4} alt="" />
+              <div className="w-5 h-5">
+                <img src={isActive? vector4W :Vector4} alt="" />
               </div>
-              <div className="hidden group-hover:block w-5 h-5">
-                <img src={vector4W} alt="" />
-              </div>
-              {isSidebarOpen && <p>Account</p>}
+              
+              {isSidebarOpen && ( <p className={isActive? "text-white":"group-hover:text-white"}>Account</p>
+            )}
             </div>
-          </Link>
+            )}
+          </NavLink>
         </div>
       </div>
       <div>
