@@ -20,6 +20,7 @@ function Login() {
       return;
     }
 
+
     setLoading(true);
 
     try {
@@ -85,6 +86,12 @@ function Login() {
     show: {opacity:1, y:0}
   }
 
+  const handleKeyDown = (e) => {
+    if(e.key === "Enter"){
+      handleLogin();
+    }
+  }
+
   return (
     <main
       className="bg-white flex  w-screen min-h-screen "
@@ -108,9 +115,11 @@ function Login() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={handleKeyDown}
               placeholder="Enter email"
-              className="border rounded-[10px] border-orange-600 px-2 h-15  text-black hover:border-2 hover:border-orange-400
-              focus:outline-none focus:ring-0 focus:border-orange-400"
+             className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
+              text-black hover:border-2 hover:border-orange-400 focus:outline-none focus:ring-0
+               focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
             />
             {emailError && (
               <p className="text-red-500 text-sm mt-2">{emailError}</p>
@@ -123,9 +132,11 @@ function Login() {
               value={password}
               type={visible ? "text" : "password"}
               onChange={(e) => setPassword(e.target.value)}
+               onKeyDown={handleKeyDown}
               placeholder="Enter password"
-              className="border rounded-[10px] border-orange-600 px-2 h-15 text-black hover:border-2 hover:border-orange-400
-              focus:outline-none focus:ring-0 focus:border-orange-400"
+             className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
+              text-black hover:border-2 hover:border-orange-400
+              focus:outline-none focus:ring-0 focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
             />
             {passwordError && (
               <p className="text-red-500 text-sm mt-2">{passwordError}</p>
