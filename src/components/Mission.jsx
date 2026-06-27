@@ -1,4 +1,4 @@
-import mission from "../assets/mission.png";
+import Vision2 from "../assets/Vision2.png";
 
 function Mission() {
   return (
@@ -28,7 +28,7 @@ function Mission() {
 
           <div className="w-full md:flex-1 flex justify-center md:justify-end">
             <img
-              src={mission}
+              src={Vision2}
               className="self-center my-2 md:my-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto"
               alt=""
             />

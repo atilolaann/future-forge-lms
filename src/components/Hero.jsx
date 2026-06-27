@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
-import landingpage2 from "../assets/landingpage2.png";
+import Vision from "../assets/Vision.png";
 
 function Hero() {
   return (
@@ -12,7 +12,7 @@ function Hero() {
          transition={{ duration: 0.8, delay: 0.5 }}
          className="w-full md:flex-1 max-w-xl text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-            Learn, Track Progess,
+            Learn, <span className="text-orange-400">Track Progess,</span>
             <br className="hidden sm:inline" /> Build Your Future
           </h3>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-600">
@@ -36,7 +36,7 @@ function Hero() {
         transition={{ duration: 0.8, delay: 0.5 }}
          className="w-full md:flex-1 flex justify-center md:justify-end">
           <img
-            src={landingpage2}
+            src={Vision}
             className="max-w-137.5 w-full h-auto"
             alt=""
           />

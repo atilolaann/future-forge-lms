@@ -11,7 +11,7 @@ function Home() {
         <Hero />
       </div>
 
-      <StatsBar />
+      
       <Main />
     </div>
   );

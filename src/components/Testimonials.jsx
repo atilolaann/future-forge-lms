@@ -8,7 +8,7 @@ const allTestimonials = [
   {
     id: 1,
     review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+      "Before joining FutureForge, i struggled to stay consistent with learning online. The structuired class, progress tracking and access to session recordings helped me learn at my own pace without falling behind",
     name: "Sarah Keneddy",
     track: "UI/UX Design Track",
     avatar: sarah,
@@ -16,23 +16,21 @@ const allTestimonials = [
   {
     id: 2,
     review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+      "FutureForge completely changed how i learn online. The lessons are well structured in a way that actually makes sense, and i am able to track my progress without feeling overwhelmed",
     name: "Michael Umoh",
     track: "Web Development Track",
     avatar: michael,
   },
   {
     id: 3,
-    review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+    review:"Before joining FutureForge, i struggled to stay consistent with learning online. The structuired class, progress tracking and access to session recordings helped me learn at my own pace without falling behind",
     name: "Amra Johnsoon",
     track: "UI/UX Design Student",
     avatar: amra,
   },
   {
     id: 4,
-    review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+    review:"I started with zero tech background, but futureforge made everything easy to follow. the bite-sized lessons and clear explanations helped me stay consistent. i feel like i’m making progress",
     name: "Sarah Keneddy",
     track: "UI/UX Design Track",
     avatar: sarah,
@@ -40,15 +38,14 @@ const allTestimonials = [
   {
     id: 5,
     review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+    "Before joining FutureForge, i struggled to stay consistent with learning online. The structuired class, progress tracking and access to session recordings helped me learn at my own pace without falling behind",
     name: "Michael Umoh",
     track: "Web Development Track",
     avatar: michael,
   },
   {
     id: 6,
-    review:
-      "Before joining FutureForge, I struggled to stay consistent with learning online. The structured class, progress tracking and access to session recordings helped me learn at my own pace without falling behind.",
+    review:"What i love about futureforge is how practical it is. it doesnt just teach theory- it pushes you to build real projects. my portfolio improved massively within weeks of joining that particular cohort ",
     name: "Amra Johnsoon",
     track: "UI/UX Design Student",
     avatar: amra,

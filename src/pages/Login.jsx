@@ -38,7 +38,7 @@ function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.message || "Login failed. Please try again.");
+        throw new Error(data?.message || "Login failed. Please try again or contact Lead.");
       }
 
       localStorage.setItem("token", data?.data?.token);
@@ -50,7 +50,7 @@ function Login() {
         position: "top-right",
       });
     } catch (err) {
-      toast.error("Login failed. Please try again.", {
+      toast.error("Login failed. Please try again or contact Lead.", {
         description:
           err.message || "There was a problem connecting to the server.",
         duration: 4000,

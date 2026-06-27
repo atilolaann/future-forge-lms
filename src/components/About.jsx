@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import page1 from "../assets/page1.png";
+import Mission2 from "../assets/Mission2.png";
 
 function About() {
   return (
@@ -8,7 +8,7 @@ function About() {
       <div
        className="flex flex-col md:flex-row w-full max-w-[1440px] mx-auto items-center">
         {/* 2. Image: Full width on mobile, 50% width on desktop */}
-         <img src={page1} className="w-full md:w-[50%]" alt="" />
+         <img src={Mission2} className="w-full md:w-[50%]" alt="" />
         {/* 3. Text Box: Adjusted margins so text doesn't touch the screen edges on mobile */}
         <motion.div 
         initial={{ x: 90, opacity:0}}
