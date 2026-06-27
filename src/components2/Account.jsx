@@ -198,9 +198,13 @@ function Account() {
                 <div className="flex items-center gap-2 w-full sm:flex-1">
                   {/* ADDED: w-full to input for proper stretching */}
                   <input
-                    type="text"
+                    type="tel"
+                    maxLength={11}
                     value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={(e) =>{
+                      const value = e.target.value.replace(/\D/g, "");
+                       setPhoneNumber(value)
+                      }}
                     className="border rounded p-2 w-full max-w-sm text-sm sm:text-base"
                   />
 

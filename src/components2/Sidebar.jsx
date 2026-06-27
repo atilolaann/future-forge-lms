@@ -19,7 +19,7 @@ function Sidebar() {
   const handleLogout = () => {
     setShowLogout(false);
     localStorage.removeItem("token");
-    navigate("/");
+    navigate("/login", {replace: true});
   };
   return (
     <div
@@ -38,7 +38,7 @@ function Sidebar() {
           </div>
         </button>
         <div className="flex flex-col gap-4 w-full">
-          <NavLink to="/Dashboard">
+          <NavLink to="/dashboard">
           {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
@@ -61,7 +61,7 @@ function Sidebar() {
             </div>
             )}
           </NavLink>
-          <NavLink to="/Resourcescontent">
+          <NavLink to="/resourcescontent">
           {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
@@ -85,7 +85,7 @@ function Sidebar() {
             )}
             
           </NavLink>
-          <NavLink to="/Recordingscontent">
+          <NavLink to="/recordingscontent">
            {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
@@ -108,7 +108,7 @@ function Sidebar() {
             </div>
             )}
           </NavLink>
-          <NavLink to="/Account">
+          <NavLink to="/account">
             {({ isActive}) =>(
             <div
               className={`group flex items-center rounded-lg transition-all duration-200 cursor-pointer ${
