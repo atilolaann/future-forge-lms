@@ -140,7 +140,7 @@ function Login() {
                 boxShadow: "0px 0px 15px rgba(245,158,11,0.35)",
               }}
               transition={{ duration: 0.2 }}
-             className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
+             className="border rounded-[10px] border-orange-400 px-2 h-15 bg-white
               text-black hover:border-2 hover:border-orange-400 focus:outline-none focus:ring-0
                focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
             />
@@ -166,7 +166,7 @@ function Login() {
                 boxShadow: "0px 0px 15px rgba(245,158,11,0.35)",
               }}
               transition={{ duration: 0.2 }}
-             className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
+             className="border rounded-[10px] border-orange-400 px-2 h-15 bg-white
               text-black hover:border-2 hover:border-orange-400
               focus:outline-none focus:ring-0 focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
             />
