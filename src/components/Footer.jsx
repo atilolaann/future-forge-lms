@@ -11,10 +11,10 @@ const Footer = () => {
         <div className="w-full md:w-[320px] lg:w-[400px] flex flex-col gap-6">
           <h2 className="text-[24px] font-bold">FutureForge</h2>
           <p className="text-[14px] leading-[22px] opacity-90">
-            Explore a world of trusted information on child and maternal
-            vaccinations. From recommended immunization schedules to answers for
-            common concerns, we make it easy for you to stay updated, confident,
-            and in control of your family’s health journey.
+           
+At FutureForge, we are empowering learners to build future ready
+ skills through structured, practical and accessible online experiences for our students. 
+  Stay connected, follow us for more updates.
           </p>
           <div className="flex gap-[10px]">
             {[facebook, youtube, x, instagram].map((src, i) => (

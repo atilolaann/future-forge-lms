@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link, useNavigate } from "react-router-dom";
-import logo3 from "../assets/logo3.png";
+import logow from "../assets/logow.png";
 import { useState, useEffect } from "react";
 
 function Nav() {
@@ -30,11 +30,11 @@ function Nav() {
       initial={{ y: -60, opacity:0}}
       animate={{ y: 0, opacity:1}}
       transition={{ duration: 0.5 }}
-      className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-4 lg:px-8">
+      className="flex w-full items-center justify-between py-6 px-4 sm:px-6 md:px-6 lg:px-8">
         {/* Logo */}
         <div className="w-36 sm:w-44 md:w-52 lg:w-60 h-10">
           <img
-            src={logo3}
+            src={logow}
             alt="futureforge logo"
             className="h-full w-full object-contain"
           />
@@ -42,7 +42,7 @@ function Nav() {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex">
-          <ul className="flex items-center gap-6 lg:gap-8 text-gray-600">
+          <ul className="flex items-center gap-6 lg:gap-8  text-white">
             <motion.li 
             whileHover={{ scale: 1.1}}
             className="hover:text-orange-400 transition-colors duration-200">
@@ -91,7 +91,7 @@ function Nav() {
          whileHover={{scale: 1.05}}
           whileTap={{scale: 0.95 }}
           onClick={() => setToggle(true)}
-          className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-orange-100 transition-colors duration-200"
+          className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-orange-100 transition-colors duration-200 bg-white "
         >
           <span className="block w-6 h-0.5 bg-gray-800"></span>
           <span className="block w-6 h-0.5 bg-gray-800"></span>

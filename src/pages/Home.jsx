@@ -7,8 +7,8 @@ function Home() {
   return (
     <div className="bg-white">
       <div className="max-w-360 mx-auto items-center">
-        <Nav />
         <Hero />
+        <StatsBar />
       </div>
 
       
