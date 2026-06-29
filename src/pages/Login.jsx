@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftSIdeLogin from "../components/LeftSIdeLogin";
 import { toast } from "sonner";
@@ -14,6 +14,11 @@ function Login() {
   const [visible, setVisible] = useState(false);
 
   const navigate = useNavigate();
+  useEffect(() =>{
+    setEmail("");
+    setPassword("");
+    setVisible(false);
+  },[]);
 
   const handleLogin = async () => {
     if (!checkEmailAndPassword()) {
@@ -42,13 +47,22 @@ function Login() {
       }
 
       localStorage.setItem("token", data?.data?.token);
-      navigate("/dashboard");
+      //Clear the form
+      setEmail("");
+      setPassword("");
+      setVisible(false);
+      setEmailError("");
+      setPasswordError("");
+     
 
       toast.success("Login successful! Welcome back.", {
         description: "You have successfully logged in to your account.",
         duration: 4000,
         position: "top-right",
       });
+
+       navigate("/dashboard");
+
     } catch (err) {
       toast.error("Login failed. Please try again or contact Lead.", {
         description:
@@ -113,10 +127,19 @@ function Login() {
             <motion.input
               variants={inputVariants}
               type="email"
+              autoComplete="username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Enter email"
+              whileHover={{
+                scale:1.01,
+              }}
+              whileFocus={{
+                scale: 1.02,
+                boxShadow: "0px 0px 15px rgba(245,158,11,0.35)",
+              }}
+              transition={{ duration: 0.2 }}
              className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
               text-black hover:border-2 hover:border-orange-400 focus:outline-none focus:ring-0
                focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
@@ -128,12 +151,21 @@ function Login() {
 
           <div className="flex flex-col mt-4 relative">
             <label className="font-normal text-md">Password</label>
-            <input
+            <motion.input
               value={password}
               type={visible ? "text" : "password"}
+              autoComplete="current-password"
               onChange={(e) => setPassword(e.target.value)}
-               onKeyDown={handleKeyDown}
+              onKeyDown={handleKeyDown}
               placeholder="Enter password"
+               whileHover={{
+                scale:1.01,
+              }}
+              whileFocus={{
+                scale: 1.02,
+                boxShadow: "0px 0px 15px rgba(245,158,11,0.35)",
+              }}
+              transition={{ duration: 0.2 }}
              className="border rounded-[10px] border-orange-600 px-2 h-15 bg-white
               text-black hover:border-2 hover:border-orange-400
               focus:outline-none focus:ring-0 focus:border-orange-400 [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_white]"
@@ -162,13 +194,21 @@ function Login() {
           </div>
 
           <div className="w-full mt-10">
-            <button
+            <motion.button
               onClick={handleLogin}
               disabled={loading}
+               whileHover={{
+                scale:1.05,
+              }}
+              whileFocus={{
+                scale: 1.02,
+                boxShadow: "0px 0px 15px rgba(245,158,11,0.35)",
+              }}
+              transition={{ duration: 0.2 }}
               className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white rounded-[10px] py-1.5 w-full font-medium h-15 cursor-pointer"
             >
               {loading ? "Logging in..." : "Login"}
-            </button>
+            </motion.button>
 
             <p className="pt-2 text-lg">
               Don't have access to LMS?{" "}
