@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import logow from "../assets/logow.png";
-import loginn from "../assets/loginn.png";
+import logiinn from "../assets/logiinn.png";
 
 function LoginA() {
   return (
@@ -8,7 +8,7 @@ function LoginA() {
       <section className="p-10 text-white flex items-center flex-col  gap-10 min-h-screen bg-cover bg-center bg-no-repeat"
       
       style={{
-        backgroundImage: `url(${loginn})`
+        backgroundImage: `url(${logiinn})`
       }}>
         {/* Logo */}
         <motion.div
