@@ -1,12 +1,12 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
-import heroo from "../assets/heroo.png";
+import herooo from "../assets/herooo.png";
 import Nav from "../components/Nav.jsx";
 
 function Hero() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      <img src={heroo}
+      <img src={herooo}
        alt=""
        className="absolute inset-0 w-full h-full object-cover"
        />

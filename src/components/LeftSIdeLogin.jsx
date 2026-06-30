@@ -29,7 +29,7 @@ function LoginA() {
 
         <div className="w-136">
           <h2 className="text-5xl font-bold py-5  mb-6">Onboard <br /> into our <span className="text-orange-500"> LMS </span></h2>
-          <p className="text-xl font-normal mt-10 w-60  border-t border-t-orange-600">
+          <p className="text-xl font-normal mt-10 w-60  border-t border-t-orange-600 pt-4">
             Your personalized learning  hub for resources, recordings, progress
             tracking, and cohort collaboration , all in one place.
           </p>
