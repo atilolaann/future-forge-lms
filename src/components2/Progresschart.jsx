@@ -1,4 +1,4 @@
-import line from "../assets/line.png";
+import line3 from "../assets/line3.png";
 function Progresschart() {
   return (
     <div className="w-full  ">
@@ -15,7 +15,7 @@ function Progresschart() {
           </p>
         </div>
         <div className="mt-2 sm:mt-0  w-full overflow-hidden">
-          <img src={line} alt="" />
+          <img src={line3} alt="" />
         </div>
       </div>
     </div>

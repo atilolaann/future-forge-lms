@@ -12,7 +12,7 @@ function Hero() {
        />
       <div className="absolute inset-0 bg-black/5"></div>
        <Nav />
-      <main className="relative z-10 flex md:px-12.5 md:flex-row gap-10 md:gap-2 justify-between px-4 items-center min-h-[70vh] py-10 md:py-0">
+      <main className="w-full relative z-10 flex md:px-12 md:flex-row gap-10 md:gap-2 justify-between px-4 items-center min-h-[70vh] py-10 md:py-0">
         
         <motion.div
         initial={{ x: -90, opacity:0}}
