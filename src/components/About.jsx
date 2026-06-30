@@ -3,8 +3,8 @@ import hero2 from "../assets/hero2.png";
 
 function About() {
   return (
-    <div className="bg-linear-to-b from-[#f5ac2e] via-[#ff8000] to-[#ff620d]">
-    <div className="bg-linear-to-b from-[#f5ac2e] via-[#ff8000] to-[#ff620d]">
+    <div>
+    <div>
       {/* 1. Main Container: Stacked vertically on mobile, side-by-side on desktop */}
       <div
        className="flex flex-col md:flex-row w-full items-center">
