@@ -1,4 +1,4 @@
-import radial from "../assets/radial.png";
+import radialn from "../assets/radialn.png";
 function Welcomecard({ userData }) {
   return (
     <div className="w-full ">
@@ -14,7 +14,7 @@ function Welcomecard({ userData }) {
         </div>
         <div className="flex flex-col items-center mt-4 sm:mt-0 text-center">
           <div className="w-70">
-            <img src={radial} alt="" />
+            <img src={radialn} alt="" />
           </div>
           <p className="text-xs sm:text-sm text-gray-600 mt-2">
             Keep it up you're up to a great start
