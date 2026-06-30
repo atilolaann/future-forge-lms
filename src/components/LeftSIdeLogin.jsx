@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import LoginLogo from "../assets/login-logo.png";
+import logow from "../assets/logow.png";
 import loginn from "../assets/loginn.png";
 
 function LoginA() {
@@ -17,7 +17,7 @@ function LoginA() {
         transition={{duration: 0.8 }}
         className="w-136 h-25">
           <img
-            src={LoginLogo}
+            src={logow}
             className="w-60"
             alt="futureforge logo"
           />

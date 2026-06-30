@@ -12,8 +12,9 @@ import Mission from "../components/Mission.jsx";
 function Main() {
   return (
     <div>
+      <About />
       <div className="m-12">
-        <About />
+        
        <Features />
        
        

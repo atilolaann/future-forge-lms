@@ -3,11 +3,12 @@ import hero2 from "../assets/hero2.png";
 
 function About() {
   return (
-    <div >
+    <main>
+    <div className="w-full p-4 bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430]">
     <div >
       {/* 1. Main Container: Stacked vertically on mobile, side-by-side on desktop */}
       <div
-       className="flex flex-col md:flex-row w-full items-center">
+       className="flex flex-col md:flex-row items-center">
         {/* 2. Image: Full width on mobile, 50% width on desktop */}
       
           <img src={hero2} className="w-full rounded-lg md:w-[50%]" alt="" />
@@ -47,6 +48,7 @@ function About() {
       </div>
     </div>
     </div>
+    </main>
   );
 }
 
