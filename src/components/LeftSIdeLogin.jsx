@@ -1,11 +1,15 @@
 import { motion } from "framer-motion"
 import LoginLogo from "../assets/login-logo.png";
-import login from "../assets/login.png";
+import loginn from "../assets/loginn.png";
 
 function LoginA() {
   return (
     <div className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] flex-1 mim-h-screen overflow-y-auto">
-      <section className="p-10 text-white flex items-center flex-col justify-center gap-10 2xl:gap-16 h-full">
+      <section className="p-10 text-white flex items-center flex-col  gap-10 min-h-screen bg-cover bg-center bg-no-repeat"
+      
+      style={{
+        backgroundImage: `url(${loginn})`
+      }}>
         {/* Logo */}
         <motion.div
         initial={{opacity:0, x: -50}}
@@ -14,28 +18,20 @@ function LoginA() {
         className="w-136 h-25">
           <img
             src={LoginLogo}
-            className="w-full h-full object-contain"
+            className="w-60"
             alt="futureforge logo"
           />
         </motion.div>
 
-        {/* Login Image */}
-        <div className="w-136 h-auto">
-          <img
-            src={login}
-            className="w-full h-full my-2"
-            alt="login image"
-            style={{ objectFit: "contain" }}
-          />
-        </div>
+       
 
         {/* Description */}
 
         <div className="w-136">
-          <h2 className="text-4xl font-bold py-5">Onboard into our LMS</h2>
-          <p className="text-2xl font-normal">
-            Your personalized learning hub for resources, recordings, progress
-            tracking, and cohort collaboration — all in one place
+          <h2 className="text-5xl font-bold py-5  mb-6">Onboard <br /> into our <span className="text-orange-500"> LMS </span></h2>
+          <p className="text-xl font-normal mt-10 w-60  border-t border-t-orange-600">
+            Your personalized learning  hub for resources, recordings, progress
+            tracking, and cohort collaboration , all in one place.
           </p>
         </div>
       </section>

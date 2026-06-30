@@ -3,8 +3,8 @@ import hero2 from "../assets/hero2.png";
 
 function About() {
   return (
-    <div>
-    <div>
+    <div >
+    <div >
       {/* 1. Main Container: Stacked vertically on mobile, side-by-side on desktop */}
       <div
        className="flex flex-col md:flex-row w-full items-center">
