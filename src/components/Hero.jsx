@@ -14,7 +14,7 @@ function Hero() {
         <Nav />
       </div>
 
-      <main className="absolute inset-0 z-10 flex md:px-12 md:flex-row gap-6 md:gap-2 justify-between px-4 items-center py-6 md:py-0">
+      <main className="w-full h-full absolute inset-0 z-10 flex md:px-12 md:flex-row gap-6 md:gap-2 justify-between px-4 items-start md:items-center pt-20 sm:pt-24 md:pt-0 pb-6 md:pb-0">
         <motion.div
           initial={{ x: -90, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
