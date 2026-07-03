@@ -43,7 +43,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full mt-20 bg-[#000000] text-white px-6 sm:px-10 lg:px-[65px] font-['Gadugi',_sans-serif]">
+    <footer className="w-full  bg-[#000000] text-white px-6 sm:px-10 lg:px-[65px] font-['Gadugi',_sans-serif]">
       <div className="max-w-[1440px] mx-auto py-12 sm:py-16 lg:py-[80px] flex flex-col md:flex-row justify-between items-start gap-12">
         <div className="w-full md:w-[320px] lg:w-[400px] flex flex-col gap-6">
           <h2 className="text-[24px] font-bold">FutureForge</h2>

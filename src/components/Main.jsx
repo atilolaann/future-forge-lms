@@ -13,7 +13,7 @@ function Main() {
   return (
     <div>
       <About />
-      <div className="m-12">
+      <div className="">
         
        <Features />
        

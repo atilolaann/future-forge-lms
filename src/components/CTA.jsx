@@ -10,10 +10,10 @@ const CTA = () => {
     );
   };
   return (
-    <section className="w-full px-4 py-8 sm:px-6 md:py-16 flex justify-center font-['Gadugi',_sans-serif]">
+    <section className="w-full h-full px-4 py-8 bg-linear-to-br from-black via-orange-400 to-black sm:px-6 md:py-16 flex justify-center font-['Gadugi',_sans-serif]">
       <div
-        className="w-full max-w-[1240px] rounded-[10px] py-10 px-4 sm:px-8 md:py-14 md:px-12 lg:py-[72px] lg:px-[60px]
-         flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6 lg:gap-0 bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430]"
+        className="w-full max-w-[1240] rounded-[10px] py-10 px-4 sm:px-8 md:py-14 md:px-12 lg:py-[72px] lg:px-[60px]
+         flex shadow-inner flex-col md:flex-row items-center justify-between gap-8 md:gap-6 lg:gap-0 bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430]"
       >
         <div className="w-full flex flex-col gap-4 md:gap-6 lg:gap-[36px] text-center md:text-left max-w-[600px]">
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-bold leading-tight md:leading-snug lg:leading-[78px] m-0">
