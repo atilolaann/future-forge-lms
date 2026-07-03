@@ -14,7 +14,7 @@ function Hero() {
         <Nav />
       </div>
 
-      <main className="absolute inset-0 z-10 flex md:px-12 md:flex-row gap-6 md:gap-2 justify-between px-4 items-center py-6 md:py-0">
+      <main className="w-full h-full absolute inset-0 z-10 flex md:px-12 md:flex-row gap-6 md:gap-2 justify-between px-4 items-start md:items-center pt-20 sm:pt-24 md:pt-0 pb-6 md:pb-0">
         <motion.div
           initial={{ x: -90, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -35,7 +35,7 @@ function Hero() {
           <motion.button
             initial={{ x: 90, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
             className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg mt-3 sm:mt-6 text-sm sm:text-base"
