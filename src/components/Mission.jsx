@@ -1,9 +1,9 @@
 import Mission3 from "../assets/Mission3.png";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function Mission() {
   return (
-    <main>
+    <main id="mission" className="scroll-mt-24">
       <div className="w-full bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] text-black">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 py-10 md:py-4 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-4">
           <div className="w-full md:flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%]">
@@ -25,15 +25,15 @@ function Mission() {
                 <br className="hidden md:inline" /> with structured tools
               </p>
 
-              
-          <motion.button
-           initial={{ x: 90, opacity:0}}
-           whileInView={{ x: 0, opacity:1}}
-           transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{once: true}}
-           className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-black mt-8">
-            Learn More
-          </motion.button>
+              <motion.button
+                initial={{ x: 90, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-black mt-8"
+              >
+                Learn More
+              </motion.button>
             </div>
           </div>
 
