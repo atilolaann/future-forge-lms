@@ -25,7 +25,7 @@ function Features() {
 
 
   return (
-    <div className="w-full max-w-[1440px]  px-4 sm:px-6 md:px-2 py-8 md:py-16">
+    <div className="w-full max-w-[1440px] bg-black text-white px-4 sm:px-6 md:px-2 py-8 md:py-16">
       <div className="py-5 w-full md:max-w-[70%] lg:max-w-[50%] text-center md:text-left">
         <motion.h3 
         initial={{ opacity: 0, y: -20 }}

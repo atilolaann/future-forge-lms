@@ -43,11 +43,18 @@ function Dashboard() {
   }, [token, navigate]);
 
   if (!userData) {
-    return <p className="p-6">Loading...</p>;
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-8 h-8 border-4 border-orange-400 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-gray-500 text-sm font-medium">Loading your dashboard…</p>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden bg-gray-50">
+    <div className="w-full min-h-screen overflow-x-hidden bg-gray-50 font-sans">
       
       <Navbar userData={userData} />
 
@@ -58,10 +65,12 @@ function Dashboard() {
         {/* Content wrapper taking remaining horizontal space */}
         <div className="flex-1 w-full p-4 md:p-6 flex flex-col gap-6">
           <div className="mt-2 md:mt-4 px-2">
-            <h1 className="text-2xl md:text-3xl font-bold">
-              Welcome back, {userData?.fullName || "Student"}
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900">
+              Welcome back,{" "}
+              <span className="text-orange-400">{userData?.fullName || "Student"}</span>
             </h1>
-            <p className="text-sm md:text-base text-gray-600 mt-1">
+            <p className="text-sm md:text-base text-gray-500 mt-1.5 flex items-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-orange-400"></span>
               {userData?.trackId?.name || "No track assigned yet"}
             </p>
           </div>

@@ -4,17 +4,14 @@ import doc from "../assets/doc.png";
 function Resourcescard() {
   return (
     <div className="w-full h-full">
-      <div
-        className="m-0 sm:m-2 p-4 sm:p-6 w-full  h-full border-gray-300 rounded-lg shadow-inner flex flex-col justify-between
-       hover:-translate-y-3 hover:shadow-lg transition-all duration-300"
-      >
+      <div className="m-0 sm:m-2 p-4 sm:p-6 w-full h-full bg-white rounded-2xl border border-l-4 border-l-orange-400 border-gray-100 shadow-sm flex flex-col justify-between hover:-translate-y-1 hover:shadow-md hover:border-amber-200 transition-all duration-300">
         <div>
-          <h2 className="text-lg sm:text-xl font-bold py-2 sm:py-6">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900 py-2 sm:py-4">
             Resources
           </h2>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 pb-4 sm:pb-6 items-start sm:items-center">
-            <p className="text-sm sm:text-base">
-              Find important links curriculum, schedules and more
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 pb-4 items-start sm:items-center">
+            <p className="text-sm sm:text-base text-gray-600">
+              Find important links, curriculum, schedules and more
             </p>
             <img
               src={doc}
@@ -26,8 +23,7 @@ function Resourcescard() {
         <div>
           <Link
             to="/Resourcescontent"
-            className="block text-center bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430]
-             text-white w-full p-2 rounded-lg hover:bg-orange-700   hover:-translate-y-3 hover:shadow-lg transition-all duration-300"
+            className="block text-center bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white font-semibold w-full py-2.5 rounded-xl hover:shadow-[0_4px_14px_rgba(245,137,30,0.4)] transition-all duration-200"
           >
             View Resources
           </Link>
