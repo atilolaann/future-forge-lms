@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Mission() {
   return (
     <main id="mission" className="scroll-mt-24">
-      <div className="w-full bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] text-black">
+      <div className="w-full bg-orange-50 text-black">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 py-10 md:py-4 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-4">
           <div className="w-full md:flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-full md:max-w-[50%]">
             <div>

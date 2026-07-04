@@ -130,9 +130,9 @@ function Account() {
             </h2>
 
             {/* CHANGED: Removed strict w-[507]. Made it w-full on mobile, and lg:max-w-[507px] on large screens to preserve your original width constraint safely. Adjusted padding/margin for mobile. */}
-            <div className="m-0 sm:m-2 p-4 md:p-6 w-full lg:max-w-[507] border-gray-300 rounded-lg shadow-inner h-full">
+            <div className="m-0 sm:m-2 p-4 md:p-6  lg:max-w-[507] border-gray-300 rounded-lg shadow-inner h-full">
               {/* CHANGED: flex-col on mobile so the label stacks above the value. sm:flex-row places them side-by-side on larger screens. */}
-              <div className="flex flex-col sm:flex-row w-full sm:items-center">
+              <div className="flex flex-col sm:flex-row  sm:items-center">
                 {/* CHANGED: w-full on mobile, sm:w-48 on larger screens. Adjusted vertical padding. */}
                 <p className="w-full sm:w-48 text-gray-800 py-2 sm:py-6">
                   Full name

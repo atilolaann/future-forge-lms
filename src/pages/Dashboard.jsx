@@ -85,7 +85,7 @@ function Dashboard() {
             <Resourcescard />
           </div>
 
-          <Summarycard />
+          
         </div>
       </div>
     </div>

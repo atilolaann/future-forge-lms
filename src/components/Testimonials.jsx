@@ -107,9 +107,9 @@ const TestimonialCard = ({ testimonial }) => {
       <motion.div
         variants={cardVariants}
         whileHover={{ y: -10, scale: 1.02 }}
-        className="border border-orange-300 rounded-[30px] p-6 bg-black flex flex-col justify-between grow shadow-sm"
+        className="border border-orange-400 rounded-[30px] p-6 bg-white  flex flex-col justify-between grow shadow-sm"
       >
-        <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[28px] text-white font-normal m-0">
+        <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[28px] text-black font-normal m-0">
           {testimonial.review}
         </p>
         <StarRating />
@@ -125,7 +125,7 @@ const TestimonialCard = ({ testimonial }) => {
           <h4 className="text-[14px] font-bold text-white m-0 leading-tight">
             {testimonial.name}
           </h4>
-          <p className="text-[12px] text-neutral-400 m-0 mt-1">
+          <p className="text-[12px] text-gray-800 m-0 mt-1">
             {testimonial.track}
           </p>
         </div>
@@ -141,14 +141,14 @@ const Testimonials = () => {
     : allTestimonials.slice(0, 3);
 
   return (
-    <section className="w-full bg-black">
+    <section className="w-full bg-orange-50">
       <div className="py-12 px-4 sm:px-8 md:px-10 max-w-[1440px] mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-8 md:mb-12 max-w-[362px] text-left"
+          className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-black mb-8 md:mb-12 max-w-[362] text-left"
         >
           Hear What They Say About Us
         </motion.h2>
@@ -164,7 +164,8 @@ const Testimonials = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowAll(!showAll)}
-            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600 text-white font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
+            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600
+             text-black font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
           >
             {showAll ? "See less" : "See more"}
           </motion.button>
