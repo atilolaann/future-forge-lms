@@ -141,7 +141,7 @@ const Testimonials = () => {
     : allTestimonials.slice(0, 3);
 
   return (
-    <section className="w-full bg-orange-50">
+    <section id="testimonials" className="w-full bg-orange-50 scroll-mt-24">
       <div className="py-12 px-4 sm:px-8 md:px-10 max-w-[1440px] mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
