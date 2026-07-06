@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo3 from "../assets/logo3.png";
 import Frame from "../assets/Frame.png";
+import { link } from "framer-motion/client";
 
 function Navbar({ userData }) {
 
@@ -9,8 +10,14 @@ function Navbar({ userData }) {
   const [showNotifications, setShowNotifications] = useState(false);
 
   const notifications = [
-    "New resources uploaded",
-    " Week 5 recording is available"
+    {
+      message: "New resources uploaded ",
+      link:"/Resourcescontent",
+    },
+    {
+      message: "Week 5 recording is available ",
+      link:"/Recordingscontent",
+    }
   ];
 
   const initials = userData?.fullName
@@ -62,12 +69,14 @@ function Navbar({ userData }) {
                 </div>
                 <div className="max-h-60 overflow-y-auto divide-y divide-gray-50">
                   {notifications.map((note, index) => (
-                    <div
+                    <Link
                       key={index}
-                      className="p-3.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-gray-900 transition-colors duration-150 cursor-pointer"
+                      to={note.link}
+                      onClick={() => setShowNotifications(false)}
+                      className="block p-3.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-gray-900 transition-colors duration-150 cursor-pointer"
                     >
-                      {note}
-                    </div>
+                      {note.message}
+                    </Link>
                   ))}
                 </div>
               </div>

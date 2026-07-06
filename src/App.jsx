@@ -13,6 +13,17 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <Toaster
+      position="top-right"
+      closeButton
+      toastOptions={{
+        style: {
+          background: "#ffffff",
+          color:"#FDBA74",
+          border: "none",
+        },
+      }}
+      />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -50,17 +61,6 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-      <Toaster
-      position="top-right"
-      closeButton
-      toastOptions={{
-        style: {
-          background: "ffffff",
-          color:"#FDBA74",
-          border: "none",
-        },
-      }}
-      />
     </div>
   );
 }

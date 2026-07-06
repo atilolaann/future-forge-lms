@@ -19,10 +19,14 @@ function SessionTimeout() {
         () => {
           console.log("Timer expired");
           localStorage.removeItem("token");
-          toast.error("Session expired. Please log in again")
 
-          alert("Session expired. Please login again.");
-          navigate("/login");
+          toast.error("Session expired. Please login again.",{
+            duration:3000,
+          });
+
+          setTimeout(() => {
+            navigate("/login", { replace: true });
+          }, 5000); // Delay navigation for 5 seconds to allow the toast to be visible
         },
         20 * 60 * 1000,
       ); // 20 minutes
