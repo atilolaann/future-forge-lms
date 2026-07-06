@@ -4,7 +4,7 @@ import hero2 from "../assets/hero2.png";
 function About() {
   return (
     <main id="about" className="scroll-mt-24">
-      <div className="w-full p-4 bg-orange-50">
+      <div className="w-full p-4 bg-white">
         <div>
           {/* 1. Main Container: Stacked vertically on mobile, side-by-side on desktop */}
           <div className="flex flex-col md:flex-row items-center">
