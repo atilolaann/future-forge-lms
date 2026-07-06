@@ -101,21 +101,29 @@ const Footer = () => {
             >
               Our mission
             </button>
+
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="text-[14px] hover:underline text-left cursor-pointer"
+            >
+              Testimonials
+            </button>
           </div>
 
           <div id="contact" className="flex flex-col gap-4 scroll-mt-24">
             <h3 className="font-bold text-[18px] mb-2">Contact</h3>
-            <p className="text-[14px] w-[180px]">
-              Eric Moore Road, Lagos Nigeria
-            </p>
-            <p className="text-[14px]">fforge@gmail.com</p>
-            <p className="text-[14px]">012-800-200</p>
+            <a href="mailto:admin@futureforgelearning.com" className="text-[14px] hover:underline cursor-pointer text-white no-underline">
+              admin@futureforgelearning.com
+            </a>
+            <a href="https://wa.me/2349168095276" target="_blank" rel="noopener noreferrer" className="text-[14px] hover:underline cursor-pointer text-white no-underline">
+              +2349168095276
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto pb-8 border-t-[1px] border-white text-center text-[14px]">
-        <div className="pt-8">All rights Reserved</div>
+      <div className="max-w-[1440px] mx-auto pb-8 border-t-[1px] border-white/20 text-center text-[14px] text-gray-300">
+        <div className="pt-8">&copy; 2026 FutureForge. All rights reserved.</div>
       </div>
     </footer>
   );

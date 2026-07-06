@@ -112,11 +112,13 @@ function Nav() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setToggle(true)}
-          className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-orange-100 transition-colors duration-200 bg-white "
+          className="md:hidden flex items-center justify-center p-2 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 shadow-lg"
         >
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
-          <span className="block w-6 h-0.5 bg-gray-800"></span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7H20" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M4 12H16" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M4 17H20" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
         </motion.button>
       </motion.header>
 

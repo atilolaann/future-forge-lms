@@ -30,7 +30,8 @@ function Mission() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-black mt-8"
+                onClick={() => window.open("https://futureforge-project-snx5.vercel.app/", "_blank")}
+                className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-black mt-8 cursor-pointer"
               >
                 Learn More
               </motion.button>
