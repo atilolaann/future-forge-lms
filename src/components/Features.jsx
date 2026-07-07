@@ -54,7 +54,7 @@ function Features() {
         transition={{ duration: 0.5, ease:"easeOut"}}
         whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
       
-        className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+        className="border border-orange-300 rounded-2xl p-6 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left bg-white shadow-[inset_0_0_20px_rgba(245,137,30,0.15),_0_10px_30px_-10px_rgba(245,137,30,0.15)]">
           <motion.img
             whileHover={{rotate:10, scale:1.1,}}
             transition={{type:"spring",stiffness: 300,}}
@@ -75,7 +75,7 @@ function Features() {
           variants={{cardVariants}}
         transition={{ duration: 0.5, ease:"easeOut"}}
         whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
-        className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+        className="border border-orange-300 rounded-2xl p-6 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left bg-white shadow-[inset_0_0_20px_rgba(245,137,30,0.15),_0_10px_30px_-10px_rgba(245,137,30,0.15)]">
           <motion.img
            whileHover={{rotate:10, scale:1.1,}}
             transition={{type:"spring",stiffness: 300,}}
@@ -96,7 +96,7 @@ function Features() {
           variants={{cardVariants}}
         transition={{ duration: 0.5, ease:"easeOut"}}
         whileHover={{y: -8, scale:1.02, transition: {duration:0.2}}}
-        className="border border-orange-400 rounded-sm p-5 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+        className="border border-orange-300 rounded-2xl p-6 w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left bg-white shadow-[inset_0_0_20px_rgba(245,137,30,0.15),_0_10px_30px_-10px_rgba(245,137,30,0.15)]">
           <motion.img
            whileHover={{rotate:10, scale:1.1,}}
             transition={{type:"spring",stiffness: 300,}}

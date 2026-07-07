@@ -45,7 +45,7 @@ function Hero() {
             <motion.button
               initial={{ x: 90, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.01 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#E3621D] text-white px-8 py-3.5 rounded-full mt-6 sm:mt-8 text-[15px] font-semibold shadow-[0_8px_20px_-6px_rgba(245,158,11,0.6)]"

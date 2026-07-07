@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo3 from "../assets/logo3.png";
-import Frame from "../assets/Frame.png";
 import { link } from "framer-motion/client";
 
 function Navbar({ userData }) {
@@ -47,14 +46,21 @@ function Navbar({ userData }) {
           <div className="relative">
             <button
               onClick={() => setShowNotifications(!showNotifications)}
-              className="relative p-1.5 rounded-full hover:bg-orange-50 transition-colors duration-200"
+              className="relative p-2 rounded-full hover:bg-orange-50 transition-colors duration-200 flex items-center justify-center cursor-pointer"
             >
-              <img
-                src={Frame}
-                className="w-9 h-9 sm:w-9 sm:h-9"
-                alt="notifications"
-              />
-              <span className="absolute -top-1 -right-1 bg-orange-500 text-white font-bold text-[10px] rounded-full w-6 h-6 flex items-center justify-center ring-2 ring-white">
+              <svg
+                className="w-6 h-6 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+              <span className="absolute top-1.5 right-1.5 bg-orange-500 text-white font-bold text-[9px] rounded-full w-4.5 h-4.5 flex items-center justify-center ring-2 ring-white shadow-sm">
                 {notifications.length}
               </span>
             </button>

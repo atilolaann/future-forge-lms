@@ -107,7 +107,7 @@ const TestimonialCard = ({ testimonial }) => {
       <motion.div
         variants={cardVariants}
         whileHover={{ y: -10, scale: 1.02 }}
-        className="border border-orange-400 rounded-[30px] p-6 bg-white  flex flex-col justify-between grow shadow-sm"
+        className="border border-orange-300 rounded-[30px] p-6 bg-white flex flex-col justify-between grow shadow-[inset_0_0_20px_rgba(245,137,30,0.15),_0_10px_30px_-10px_rgba(245,137,30,0.05)]"
       >
         <p className="text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[28px] text-black font-normal m-0">
           {testimonial.review}
@@ -122,7 +122,7 @@ const TestimonialCard = ({ testimonial }) => {
           className="w-10 h-10 rounded-full object-cover shrink-0"
         />
         <div>
-          <h4 className="text-[14px] font-bold text-white m-0 leading-tight">
+          <h4 className="text-[14px] font-bold text-black m-0 leading-tight">
             {testimonial.name}
           </h4>
           <p className="text-[12px] text-gray-800 m-0 mt-1">
