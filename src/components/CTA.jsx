@@ -5,7 +5,7 @@ const CTA = () => {
 
    const handleGetStarted = () => {
     window.open(
-      "https://futureforge-project-snx5.vercel.app/",
+      "https://futureforge-project-snx5.vercel.app/registration-form",
       "_blank",
     );
   };
