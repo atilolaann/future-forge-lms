@@ -122,7 +122,7 @@ const TestimonialCard = ({ testimonial }) => {
           className="w-10 h-10 rounded-full object-cover shrink-0"
         />
         <div>
-          <h4 className="text-[14px] font-bold text-white m-0 leading-tight">
+          <h4 className="text-[14px] font-bold text-black m-0 leading-tight">
             {testimonial.name}
           </h4>
           <p className="text-[12px] text-gray-800 m-0 mt-1">
