@@ -43,8 +43,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full  bg-[#000000] text-white px-6 sm:px-10 lg:px-[65px] font-['Gadugi',_sans-serif]">
-      <div className="max-w-[1440px] mx-auto py-12 sm:py-16 lg:py-[80px] flex flex-col md:flex-row justify-between items-start gap-12">
+    <footer className="w-full bg-[#000000] text-white font-['Gadugi',_sans-serif]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 py-12 sm:py-16 lg:py-[80px] flex flex-col md:flex-row justify-between items-start gap-12">
         <div className="w-full md:w-[320px] lg:w-[400px] flex flex-col gap-6">
           <h2 className="text-[24px] font-bold">FutureForge</h2>
           <p className="text-[14px] leading-[22px] opacity-90">
@@ -122,8 +122,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto pb-8 border-t-[1px] border-white/20 text-center text-[14px] text-gray-300">
-        <div className="pt-8">&copy; 2026 FutureForge. All rights reserved.</div>
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 pb-8">
+        <div className="border-t-[1px] border-white/20 pt-8 text-center text-[14px] text-gray-300">
+          &copy; 2026 FutureForge. All rights reserved.
+        </div>
       </div>
     </footer>
   );

@@ -92,7 +92,7 @@ function Nav() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-black text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-800 transition-colors duration-200"
+            className="bg-black text-white px-5 lg:px-6 py-2.5 rounded-full text-sm lg:text-[15px] font-semibold hover:bg-neutral-800 transition-colors duration-200"
           >
             <Link to="/Login">Log in</Link>
           </motion.button>
@@ -100,7 +100,7 @@ function Nav() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] text-white px-4 lg:px-6 py-2 rounded-lg text-sm lg:text-base hover:bg-gray-500 transition-colors duration-200"
+            className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#E3621D] text-white px-5 lg:px-6 py-2.5 rounded-full text-sm lg:text-[15px] font-semibold transition-colors duration-200"
             onClick={handleGetStarted}
           >
             Get started
@@ -184,7 +184,7 @@ function Nav() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 w-full"
+              className="bg-black text-white px-6 py-3.5 rounded-full text-[15px] font-semibold hover:bg-neutral-800 transition-colors duration-200 w-full"
             >
               <Link to="/Login" onClick={() => setToggle(false)}>
                 Log in
@@ -194,7 +194,7 @@ function Nav() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleGetStarted}
-              className="bg-white text-orange-400 font-semibold px-6 py-3 rounded-lg hover:text-white hover:bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] transition-colors duration-200 w-full"
+              className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#E3621D] text-white font-semibold px-6 py-3.5 rounded-full text-[15px] transition-colors duration-200 w-full"
             >
               Get started
             </motion.button>

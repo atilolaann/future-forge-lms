@@ -142,7 +142,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="w-full bg-orange-100 scroll-mt-24">
-      <div className="py-12 px-4 sm:px-8 md:px-10 max-w-[1440px] mx-auto">
+      <div className="py-12 px-4 sm:px-8 md:px-12 max-w-[1440px] mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -164,8 +164,7 @@ const Testimonials = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowAll(!showAll)}
-            className="bg-linear-to-b from-[#F59E0B] via-[#F5891E] to-[#F67430] hover:bg-orange-600
-             text-black font-semibold py-3 px-10 rounded-lg text-sm transition-colors cursor-pointer"
+            className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#E3621D] text-white font-semibold py-3.5 px-10 rounded-full text-[15px] transition-colors cursor-pointer"
           >
             {showAll ? "See less" : "See more"}
           </motion.button>

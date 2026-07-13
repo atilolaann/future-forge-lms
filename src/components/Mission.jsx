@@ -30,8 +30,10 @@ function Mission() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => window.open("https://futureforge-project-snx5.vercel.app/", "_blank")}
-                className="bg-linear-to-b from-[#ffa914] via-[#F5891E] to-[#F67430] py-2 px-5 rounded-sm text-black mt-8 cursor-pointer"
+                className="bg-gradient-to-b from-[#F59E0B] via-[#F5891E] to-[#E3621D] text-white px-8 py-3.5 rounded-full mt-8 text-[15px] font-semibold shadow-[0_8px_20px_-6px_rgba(245,158,11,0.6)] cursor-pointer"
               >
                 Learn More
               </motion.button>
