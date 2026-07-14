@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom";
 import logow from "../assets/logow.png";
 import logiinn from "../assets/logiinn.png";
 
@@ -16,11 +17,13 @@ function LoginA() {
         animate={{opacity:1, x: 0}}
         transition={{duration: 0.8 }}
         className="w-136 h-25">
-          <img
-            src={logow}
-            className="w-60"
-            alt="futureforge logo"
-          />
+          <Link to="/">
+            <img
+              src={logow}
+              className="w-60 cursor-pointer hover:opacity-90 transition-opacity"
+              alt="futureforge logo"
+            />
+          </Link>
         </motion.div>
 
        
