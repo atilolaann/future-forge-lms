@@ -107,16 +107,17 @@ function Account() {
       <div className="flex">
         <Sidebar />
         <div className="m-4 md:m-8 w-full md:flex-1">
-          <div className="mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Account
-            </h2>
-            <p className="text-sm md:text-base text-gray-500 mt-1">
-              Manage your profile and account settings
-            </p>
-          </div>
+          <div className="w-full max-w-4xl mx-auto">
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Account
+              </h2>
+              <p className="text-sm md:text-base text-gray-500 mt-1">
+                Manage your profile and account settings
+              </p>
+            </div>
 
-          <div className="max-w-4xl space-y-6">
+            <div className="space-y-6">
             {/* PROFILE CARD: Avatar and details */}
             <div className="bg-white border border-gray-100 rounded-2xl shadow-[0_10px_30px_rgba(245,158,11,0.04)] p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100/20 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-orange-200/30 transition-colors duration-500"></div>
@@ -291,6 +292,7 @@ function Account() {
               </div>
 
             </div>
+          </div>
           </div>
         </div>
       </div>
