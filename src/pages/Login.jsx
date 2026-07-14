@@ -127,7 +127,7 @@ function Login() {
             <motion.input
               variants={inputVariants}
               type="email"
-              autoComplete="username"
+              autoComplete="off"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -154,7 +154,7 @@ function Login() {
             <motion.input
               value={password}
               type={visible ? "text" : "password"}
-              autoComplete="current-password"
+              autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Enter password"
@@ -192,6 +192,7 @@ function Login() {
               )}
             </div>
           </div>
+      
 
           <div className="w-full mt-10">
             <motion.button
@@ -209,6 +210,7 @@ function Login() {
             >
               {loading ? "Logging in..." : "Login"}
             </motion.button>
+          
 
             <p className="pt-2 text-lg">
               Don't have access to LMS?{" "}
