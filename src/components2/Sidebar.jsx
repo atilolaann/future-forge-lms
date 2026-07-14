@@ -22,10 +22,18 @@ function Sidebar() {
     navigate("/login", { replace: true });
   };
   return (
-    <div
-      className={`border-r border-gray-200 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm ${isSidebarOpen ? "w-56" : "w-16"
-        }`}
-    >
+    <>
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/20 z-40 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+      <div className={`relative flex-shrink-0 transition-all duration-300 ${isSidebarOpen ? "w-16 md:w-56" : "w-16"}`}>
+        <div
+          className={`border-r border-gray-200 bg-white flex flex-col justify-between transition-all duration-300 shadow-sm absolute md:relative top-0 left-0 h-full z-50 ${isSidebarOpen ? "w-56" : "w-16"
+            }`}
+        >
       <div
         className={`flex flex-col gap-12 min-h-screen transition-all duration-300 ${isSidebarOpen ? "p-8 items-start" : "p-2 items-center"
           }`}
@@ -134,7 +142,9 @@ function Sidebar() {
           handleLogout={handleLogout}
         />
       </div>
-    </div>
+      </div>
+      </div>
+    </>
   );
 }
 export default Sidebar;
