@@ -112,8 +112,8 @@ const Footer = () => {
 
           <div id="contact" className="flex flex-col gap-4 scroll-mt-24">
             <h3 className="font-bold text-[18px] mb-2">Contact</h3>
-            <a href="mailto:admin@futureforgelearning.com" className="text-[14px] hover:underline cursor-pointer text-white no-underline">
-              admin@futureforgelearning.com
+            <a href="mailto:futureforgelearningltd@gmail.com" className="text-[14px] hover:underline cursor-pointer text-white no-underline">
+              futureforgelearningltd@gmail.com
             </a>
             <a href="https://wa.me/2349168095276" target="_blank" rel="noopener noreferrer" className="text-[14px] hover:underline cursor-pointer text-white no-underline">
               +2349168095276
